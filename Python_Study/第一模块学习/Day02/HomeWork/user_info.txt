@@ -1,3 +1,0 @@
-alex            123
-wangwei         gb123
-kyo             123456

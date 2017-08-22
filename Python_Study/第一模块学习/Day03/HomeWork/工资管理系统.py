@@ -22,7 +22,7 @@ def user_information():
             i = i.strip()           #剔除字符串中的前后空格和换行
             user_dict[i.split()[0]] = i.split()[1]      #将员工姓名及工资存储到user_dict字典中，i.split()[0]=员工姓名 作为键
                                                         #i.split()[0]=员工工资  作为值
-            print('员工姓名：',i.split()[0])
+            print('当前员工姓名：',i.split()[0])
 
 def user_operations():
     '''定义一个用户操作的函数'''
@@ -38,7 +38,7 @@ def user_operations():
             if user_operation == 2:
                 salary_change()
             if user_operation == 3:
-                print('增加')
+                add_users()
             if user_operation == 4:
                 print('删除')
             if user_operation == 5:
@@ -56,7 +56,44 @@ def user_enquiries():
         print('\033[31;1m该用户不存在\033[0m')
 def salary_change():
     '''定义一个修改工资函数'''
+    user_information()
     change_salary = input('请输入要修改的员工姓名和工资，用空格分隔（例如：Alex 10）：')
+    salary_lists = change_salary.split()   #将用户输入的姓名和工资以列表形式打印
+    if len(salary_lists) < 2:               #判断输入内容格式是否正确 姓名 工资
+        print('\033[31;1m请输入正确格式内容\033[0m')
+    elif not salary_lists[1].isdigit():     #判断输入的工资是否是数字
+        print('\033[31;1m请输入有效工资金额\033[0m')
+    else:
+        _name = salary_lists[0].capitalize()        #定义_name变量存储 用户输入的姓名
+        _salary = salary_lists[1]                   #定义_salary变量存储 用户输入的工资
+        if _name in user_dict:
+            print('已将 \033[32;1m%s\033[0m 的工资修改为 \033[32;1m%s\033[0m元'%(_name,_salary))
+        else:
+            print('\033[31;1m该用户不存在\033[0m')
+def add_users():
+    '''定义一个增加员工函数'''
+    user_information()
+    add_user = input('请输入要增加员工姓名和工资，用空格分隔（例如：Eric 100000）：')
+    add_lists = add_user.split()
+    if len(add_lists) < 2:               #判断输入内容格式是否正确 姓名 工资
+        print('\033[31;1m请输入正确格式内容\033[0m')
+    elif not add_lists[1].isdigit():     #判断输入的工资是否是数字
+        print('\033[31;1m请输入有效工资金额\033[0m')
+    else:
+        _name = add_lists[0].capitalize()  # 定义_name变量存储 用户输入的姓名
+        _salary = add_lists[1]  # 定义_salary变量存储 用户输入的工资
+        if _name in user_dict:  #判断输入的姓名是否已存在
+            print('\033[31;1m该用户已存在\033[0m')
+        elif not _name.isalpha():       #判断输入的姓名是否是纯英文
+            print('\033[31;1m请输入正确姓名\033[0m')
+        else:
+            with open('info','a') as f:
+                f.write(_name+' ')
+                f.write(_salary+'\n')
+            print('已将 \033[32;1m%s\033[0m 的信息添加成功' % _name)
+
+
+
 
 user_operations()
 

@@ -72,7 +72,7 @@ def salary_change():
             print('已将 \033[32;1m%s\033[0m 的工资修改为 \033[32;1m%s\033[0m元'%(_name,_salary))
         else:
             print('\033[31;1m该用户不存在\033[0m')
-            
+
 def add_users():
     '''定义一个增加员工函数'''
     user_information()

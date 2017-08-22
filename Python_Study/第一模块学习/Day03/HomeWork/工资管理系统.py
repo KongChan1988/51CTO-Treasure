@@ -21,7 +21,7 @@ def user_information():
         for i in f:
             i = i.strip()           #剔除字符串中的前后空格和换行
             user_dict[i.split()[0]] = i.split()[1]      #将员工姓名及工资存储到user_dict字典中，i.split()[0]=员工姓名 作为键
-                                                        #i.split()[0]=员工工资  作为值
+                                                        #i.split()[1]=员工工资  作为值
             print('当前员工姓名：',i.split()[0])
 
 def user_operations():
@@ -45,6 +45,7 @@ def user_operations():
                 sys.exit('程序退出')
         else:
             print('\033[31;1m请输入有效操作编号\033[0m')
+
 def user_enquiries():
     '''定义一个用户查询的函数'''
     user_information()
@@ -54,6 +55,7 @@ def user_enquiries():
               %(enquirie_name.capitalize(),user_dict[enquirie_name.capitalize()]))
     else:
         print('\033[31;1m该用户不存在\033[0m')
+
 def salary_change():
     '''定义一个修改工资函数'''
     user_information()
@@ -70,6 +72,7 @@ def salary_change():
             print('已将 \033[32;1m%s\033[0m 的工资修改为 \033[32;1m%s\033[0m元'%(_name,_salary))
         else:
             print('\033[31;1m该用户不存在\033[0m')
+            
 def add_users():
     '''定义一个增加员工函数'''
     user_information()

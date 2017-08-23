@@ -7,7 +7,7 @@
 3、增、改员工工资用空格分隔
 4、实现退出功能
 '''
-import sys,os
+import sys,os,re
 
 operation_lists = '''1.查询工资
 2.修改工资
@@ -40,7 +40,7 @@ def user_operations():
             if user_operation == 3:
                 add_users()
             if user_operation == 4:
-                print('删除')
+                del_users()
             if user_operation == 5:
                 sys.exit('程序退出')
         else:
@@ -69,6 +69,15 @@ def salary_change():
         _name = salary_lists[0].capitalize()        #定义_name变量存储 用户输入的姓名
         _salary = salary_lists[1]                   #定义_salary变量存储 用户输入的工资
         if _name in user_dict:
+            with open('info','r') as f:
+                lines = f.readlines()
+
+            with open('info','w') as f_w:
+                for line in lines:
+                    if _name in line:
+                        line = line.replace(user_dict[_name],_salary)   #将源文件中的工资金额替换为修改后的工资金额
+                    f_w.write(line)
+
             print('已将 \033[32;1m%s\033[0m 的工资修改为 \033[32;1m%s\033[0m元'%(_name,_salary))
         else:
             print('\033[31;1m该用户不存在\033[0m')
@@ -94,6 +103,21 @@ def add_users():
                 f.write(_name+' ')
                 f.write(_salary+'\n')
             print('已将 \033[32;1m%s\033[0m 的信息添加成功' % _name)
+
+def del_users():
+    '''定义一个删除员工函数'''
+    user_information()
+    del_user = input('请输入要删除的员工姓名（例如：Alex）：')
+    if del_user.capitalize() in user_dict:     #将输入的员工姓名首字母变大写，方便用户输入
+        confirm_del = input('是否确认删除\033[32;1m%s\033[0m员工信息>>>任意键确认删除、按N不删除:'
+                            %del_user.capitalize())
+        if confirm_del.capitalize() != 'N':
+            print('\033[32;1m%s\033[0m的员工信息已删除'%del_user.capitalize())
+        else:
+            print('\033[31;1m已取消删除\033[0m')
+    else:
+        print('\033[31;1m该用户不存在\033[0m')
+
 
 
 

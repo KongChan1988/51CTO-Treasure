@@ -17,9 +17,8 @@ def text1():
     time.sleep(3)
     print('in the text1')
 @timer
-def text2():
-    time.sleep(3)
-    print('in the text2')
+def text2(name):
+    print('in the text2',name)
 
 print('\n-----装饰器-----')
 print('deco的内存地址：',timer(text1))

@@ -48,3 +48,32 @@ print(f.__next__())
 '''
 py_obj = compile(code,'','exec')    #将“生成器.py”文件变成字符串，在“内置函数.py”
 exec(py_obj)            #中使用compile（）方法来执行“生成器.py”
+
+
+print('\n------dir()函数-----')
+a = {}
+print(dir(a))       #查询a可使用的方法
+
+print('\n------divmod(a,b)函数-----')
+b = divmod(5,2)         # 5除以2
+print(b)                # 返回结果：（商,余数）
+
+print('\n------filter()函数-----')
+def sayhi(n):           #正常函数
+    print(n)
+sayhi(3)
+
+calc = lambda n:print(n)       #匿名函数，只能处理3元运算，不能处理for循环之类
+calc(5)
+
+res1 = filter(lambda n:n>5,range(10))   #一组数据中过滤出你想要的数据。例如：1~10过滤出大于5的
+for i in res1:
+    print('过滤大于5的数子:',i)
+
+res2 = map(lambda n:n**2,range(10))   #[n**2 for i in range(10)]
+for i in res2:                        #把1~10集合里的每一个值进行平方处理
+    print('1-10各个数的平方：',i)
+
+import functools
+res3 = functools.reduce(lambda x,y:x+y ,range(10))
+print('1-10累计相加:',res3)

@@ -77,3 +77,48 @@ for i in res2:                        #把1~10集合里的每一个值进行平�
 import functools
 res3 = functools.reduce(lambda x,y:x+y ,range(10))
 print('1-10累计相加:',res3)
+
+res4 = functools.reduce(lambda x,y:x*y,range(1,10))
+print('从1-10阶乘：',res4)
+
+print('\n------frozenset()函数-----')
+a = set([1,4,333,212,33,33,12,4])  #普通形式集合，可以有pop,clear等方法操作
+b = frozenset([1,4,33,22,22,12])    #使用frozenset()函数把集合变成不可变集合
+
+print('\n------globals()函数-----')
+print(globals())        #返回整个程序的所有变量的k,valus（键值对）格式
+
+print('\n------hash()函数-----')
+print(hash('jack'))     #hash字符串的映射，折半算法
+
+print('\n------hex()函数-----')
+print(hex(255))         #转化成十六进制
+
+print('\n------locals()函数-----')
+def text1():
+    local_var = 333
+    print(locals())     #打印函数内部局部变量
+    print(globals())    #打印全局变量
+text1()
+print(globals().get('local_var:'))
+
+print('\n------oct()函数-----')
+print(oct(255))         #转化成八进制
+
+print('\n------round()函数-----')
+print(round(1.3223,2))         #保留2位小数
+
+print('\n------sorted()函数-----')
+a = {6:2,8:0,-5:6,1:4,99:11}
+print(sorted(a.items()))       #将字典中元素变成列表按key来排序
+print(sorted(a.items(),key = lambda x:x[1]))    #将字典中元素按values来排序
+print(a)                #字典打印的时候默认是无序排列
+
+print('\n------zip()函数-----')
+a = [1,2,3,4,5,6]       #按小的来
+b = ['a','b','c','d']
+for i in zip(a,b):
+    print(i)            #将列表a、b相互对应在一起 例：1对应'a'.
+
+
+# import 装饰器小高潮 =  _import_('装饰器小高潮')

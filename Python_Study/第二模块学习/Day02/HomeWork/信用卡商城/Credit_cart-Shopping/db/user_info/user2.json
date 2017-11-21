@@ -1,0 +1,13 @@
+{
+  "status": 0,
+  "expire_date": "2021-01-01",
+  "credit": 15000,
+  "pay_day": 22,
+  "balance": 13655,
+  "enroll_date": "2016-01-02",
+  "cardid": 1112,
+  "password": "123456",
+  "username": "user2",
+  "type": 0,
+  "cardname":"广发银行"
+}

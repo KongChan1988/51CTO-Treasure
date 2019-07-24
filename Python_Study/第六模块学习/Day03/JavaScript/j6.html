@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id = 'f1' action="http://www.oldboyedu.com">
+        <input type="text" />
+        <input type="submit" value="提交"/>
+    </form>
+    <a onclick="submitFrom()">提交吧</a>
+    <script>
+        function submitFrom() {
+            var tag = document.getElementById('f1');
+            tag.submit()
+        }
+    </script>
+</body>
+</html>

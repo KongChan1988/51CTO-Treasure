@@ -1,0 +1,48 @@
+{% extends "母版.html" %}
+{% block title %}主机列表{% endblock %}
+{% block css %}
+    <style>
+        .pagent .page{
+            margin-right: 10px;
+            background-color: antiquewhite;
+            font-size: 18px;
+        }
+        .pagent .page.active{
+            background-color: brown;
+            color: white;
+        }
+        .i1{
+            width: 30px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+{% endblock %}
+{% block crount %}
+    <ul>
+        {% for i in list %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+    <div class="pagent">
+        {{ page_str }}
+        <input type="text" class="i1"><a class="page" id = "a1">跳转</a>
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="/static/jquery1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("#a1").click(function () {
+                var v = $(".i1").val();
+                if (v <= 50 && v>=1){
+                    location.href = "/tp3/?p=" + v
+                }else {
+                    location.reload()
+                }
+            })
+        })
+    </script>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/cmdb/user_edit-{{ nid }}/" method="post">
+        {% csrf_token %}
+        {{ mf.as_p }}
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>

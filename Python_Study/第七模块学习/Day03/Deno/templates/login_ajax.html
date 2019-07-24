@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/cmdb/login_ajax/" id="fm">
+        {% csrf_token %}
+        <p>{{ obj.user }}</p>
+        <p>{{ obj.pwd }}</p>
+        <p>{{ obj.email }}<span style="color: red">{{ obj.email.errors.0 }}</span></p>
+        <a id="ajax">ajax提交</a>
+    </form>
+    <script src="/static/jquery1.12.4.js"></script>
+    <script src="/static/jquery.cookie.js"></script>
+    <script>
+        $(function () {
+            $("#ajax").click(function () {
+                $.ajax({
+                    url:"/cmdb/login_ajax/",
+                    type:"POST",
+                    data:$("#fm").serialize(),
+                    success:function (org) {
+                        org = JSON.parse(org);
+                        console.log(org)
+                    },
+                    error:function (org) {
+                        
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

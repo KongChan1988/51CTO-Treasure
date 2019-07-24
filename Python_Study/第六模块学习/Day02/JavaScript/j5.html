@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="2">
+        <div></div>
+        <div>
+            c1
+        </div>
+    </div>
+    <div id="father">
+        <div id = 'brother'></div>
+        <div id="i1">
+            c2
+        </div>
+    </div>
+    <div id="3">
+        <div></div>
+        <div>
+            c3
+        </div>
+    </div>
+    <script>
+        tag = document.getElementById('i1');
+        father = tag.parentElement;     //当前标签的父级标签
+        father.children;    //当前标签的所有子标签
+        father.firstChild;  //当前标签的第一个子标签
+        father.lastChild;   //当前标签的最后一个子标签
+        father.previousElementSibling;  //当前标签的上一个兄弟标签
+        father.nextElementSibling;  //当前标签的下一个兄弟标签
+
+        tag.className = 'c1';       // .className = '类名'  修改或初始时添加某个类名
+        tag.classList.add('c2');    //.classList.add('类名')  追加一个新类名
+        tag.classList.remove('c2');     //.classList.remove('类名')  删除一个新类名
+    </script>
+</body>
+</html>

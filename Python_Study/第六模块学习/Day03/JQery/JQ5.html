@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .mask{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9;
+            opacity: 0.5;
+            background-color: black;
+        }
+        .Dialog{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            height: 500px;
+            width: 500px;
+            background-color: honeydew;
+            border: 1px solid #dddddd;
+            margin-top: -250px;
+            margin-left: -250px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>选项</th>
+                <th>IP</th>
+                <th>端口</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id = 'tb'>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1.1.11</td>
+                <td>6969</td>
+                <td><a class="edit">编辑</a> || <a>删除</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1.1.12</td>
+                <td>6969</td>
+                <td><a class="edit">编辑</a> || <a>删除</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1.1.13</td>
+                <td>6969</td>
+                <td><a class="edit">编辑</a> || <a>删除</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1.1.14</td>
+                <td>6969</td>
+                <td><a class="edit">编辑</a> || <a>删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mask hide"></div>
+    <div class="Dialog hide">
+        <input type="text" name = "IP" placeholder="IP"/>
+        <input type="text" name = "port" placeholder="PORT"/>
+        <br/>
+        <input type="button" value="取消">
+    </div>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        var a = $('tbody tr td  .edit');
+        var b = $('.Dialog input[value = "取消"]');
+        // console.log(a)
+        a.click(function () {
+            $('.mask,.Dialog').removeClass('hide');
+            var tag = $(this).parent().prevAll();
+            var port = $(tag[0]).text();
+            var ip = $(tag[1]).text();
+            // console.log(port,ip)
+            $("input[name = 'IP']").val(ip);
+            $("input[name = 'port']").val(port);
+        });
+        b.click(function () {
+            $('.mask,.Dialog').addClass('hide');
+            $("input[name = 'IP']").val("");
+            $("input[name = 'port']").val("");
+        })
+    </script>
+</body>
+</html>

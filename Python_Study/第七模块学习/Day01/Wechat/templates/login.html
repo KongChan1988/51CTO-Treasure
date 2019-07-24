@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img id = "qcode" style="width: 200px;height: 200px" src="https://login.weixin.qq.com/qrcode/{{ qcode }}"/>
+    <script src="/static/jquery1.12.4.js"></script>
+    <script>
+        TIP = 1;
+        $(function () {
+            function checklogin() {
+                $.ajax({
+                    url:'/check_login/',
+                    data:{"tip":TIP}, tye:"GET", dataType:"JSON",
+                    success:function (arg) {
+                        if (arg.code == 201){
+                            $('#qcode').attr('src',arg.data);
+                            checklogin();
+                            TIP = 0;
+                        }else if (arg.code == 408){
+                            checklogin()
+                        }else if (arg.code == 200){
+                            window.location.href = /index/;   {# 表示当code=200时跳转到index #}
+                        }
+                    }
+                })
+            }
+             checklogin()
+        })
+    </script>
+</body>
+</html>

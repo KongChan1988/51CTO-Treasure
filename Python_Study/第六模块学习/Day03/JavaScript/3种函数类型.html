@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 普通函数
+        function func() {
+            console.log(1)
+        }
+        setInterval("func()",5000);  //普通函数
+        //匿名函数
+        setInterval(function () {
+            console.log(1)
+        },5000)                      
+        
+        //自执行函数
+        (function (arg) {
+            console.log(arg)
+        })(1)
+
+    </script>
+</body>
+</html>

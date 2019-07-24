@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="15"/>
+    <title>Python_Web</title>
+    <link rel="shortcut icon" href="222.ico">
+</head>
+<body>
+    <from action="http://localhost:8888/index" method="POST">   <!-- action:链接的后台地址  method：执行后台某个方法-->
+        <smap>用户名：</smap>
+        <input type="text" name="username"/>
+        <br/>
+        <smap>密码：</smap>
+        <input type="password" name="password">
+        <br/>
+        <input type="button" value="登录1">       <!-- 只是点击按钮 无法把数据传给后台-->
+        <input type="submit" value="登录2">       <!-- submit可以把数据传给后台-->
+    </from>
+</body>
+</html>

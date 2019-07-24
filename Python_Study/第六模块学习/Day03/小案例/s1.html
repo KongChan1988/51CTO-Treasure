@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--font-awesome.min.css:压缩版 就一行显示全部-->
+    <!--font-awesome.css：未压缩版  一个一个显示-->
+    <link rel = "stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        .pg-body{
+            height: 48px;
+            background-color: #969696;
+        }
+        .pg-body:hover{
+            color: red;
+        }
+        /*当鼠标移动到pg-body时 修改 class=b的属性参数*/
+        .pg-body:hover .b{
+            background-color: #006dcc;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pg-body">
+        <div class="a">
+            123
+        </div>
+        <div class="b">456</div>
+    </div>
+    <div class="pg-body">
+        <div class="a">
+            asd
+            <i class="fab fa-accessible-icon"></i>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+    "name": "root",
+    "hostname": "192.168.72.12",
+    "username": "root",
+    "port": 22,
+    "password": "admin1988",
+    "status": 2
+}

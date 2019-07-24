@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .menu{
+            height: 40px;
+            background-color: #eeeeee;
+            line-height: 40px;
+        }
+        .menu-item{
+            padding: 0 10px;
+            float: left;
+            cursor: pointer;
+            border-right: 1px solid red;
+        }
+        .active{
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 700px;margin: 0 auto">
+        <div class="menu">
+            <div class="menu-item">菜单一</div>
+            <div class="menu-item active">菜单二</div>
+            <div class="menu-item">菜单三</div>
+        </div>
+        <div class="count">
+            <div>内容一</div>
+            <div class="hide">内容二</div>
+            <div class="hide">内容三</div>
+        </div>
+    </div>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $('.menu-item').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            var index = $(this).index();
+            $('.count').children().eq(index).removeClass('hide').siblings().addClass('hide')
+        })
+    </script>
+</body>
+</html>

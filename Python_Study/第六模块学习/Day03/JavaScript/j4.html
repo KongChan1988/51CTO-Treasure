@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="width: 600px;margin: 0 auto">
+        <!--旧IE版本需要这种方法来实现-->
+        <input  type="text" id = 'i1' value="请输入关键字" onfocus="Focus()" onblur="Blur()"/>
+
+        <!--新版本写法-->
+        <input type="text"  placeholder="请输入关键字">
+    </div>
+    <script>
+        function Focus() {
+            var tag = document.getElementById('i1');
+            var val = tag.value;
+            if (val === "请输入关键字"){
+                tag.value='';
+            }
+        }
+        function Blur() {
+            var tag = document.getElementById('i1');
+            var val = tag.value;
+            if (val === ""){
+                tag.value="请输入关键字";
+            }
+        }
+    </script>
+</body>
+</html>

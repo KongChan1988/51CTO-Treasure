@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id = 'i2'/>
+    <input type="button" value="开关" id="i1"/>
+    <div class="c1 hide">asdasd s</div>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $('#i1').click(function () {
+            /*写法一
+                $('...').hasClass('n')  :判断JQ对象是否拥有某class
+                if($('.c1').hasClass('hide')){
+                $('.c1').removeClass('hide');
+                } else {
+                    $('.c1').addClass('hide');
+                }
+            */
+            //写法二**  toggleClass('n')函数方法完全一句话替代了写法一的功能
+            $('.c1').toggleClass('hide');
+        });
+    </script>
+</body>
+</html>

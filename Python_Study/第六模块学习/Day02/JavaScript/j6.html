@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #7d7d7d;
+            opacity: 0.5;
+            z-index: 9;
+        }
+        .c2{
+            position: fixed;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            margin-left: -255px;
+            margin-top: -200px;
+            height: 200px;
+            width: 300px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: 0">
+        <input type="button" value="点我" onclick="showMadle()"/>
+    </div>
+    <!--遮罩层-->
+    <div id = "i1" class="c1 hide"></div>
+    <!--遮罩层-->
+    <div id = 'i2' class="c2 hide">
+        <input type="button" value="确认"/>
+        <input type="button" value="取消" onclick="noMadle()"/>
+    </div>
+    <script>
+        function showMadle() {
+            document.getElementById('i1').classList.remove('hide');
+            document.getElementById('i2').classList.remove('hide');
+        }
+        function noMadle() {
+            document.getElementById('i1').classList.add('hide');
+            document.getElementById('i2').classList.add('hide');
+        }
+    </script>
+</body>
+</html>

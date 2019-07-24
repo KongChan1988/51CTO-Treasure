@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for k,v in user_dict.items %}
+            <li><a target="_blank" href="detail/?nid={{ k }}">{{ v.name }} [detail/?nid={{ k }}]</a></li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for k,v in user_dict.items %}
+            <li><a target="_blank" href="/cmdb/detail-{{ k }}-1.html/">{{ v.name }} [detail-{{ k }}-1.html]</a></li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for k,v in user_dict.items %}
+            <li><a target="_blank" href="/cmdb/detail-{{ k }}.html/">{{ v.name }} [detail-{{ k }}.html]</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

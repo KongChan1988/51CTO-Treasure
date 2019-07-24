@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text"/>
+    <input type="button" value="添加" id = 't1'/>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $('#t1').click(function () {
+            var v = $("input[type='text']").val();
+            // console.log(v)
+            var tag = "<li>" + v + "</li>";
+            $('ul').append(tag)
+        });
+        /*
+        事件绑定方式：此3种性质一样
+        $('ul li').click(function () {
+            var text = $(this).text();
+            alert(text)
+        });
+        $('ul li').bind('click',function () {
+            var text = $(this).text();
+            alert(text)
+        });
+        $('ul li').unbind('click',function () {});
+
+        $('ul li').on('click',function () {
+            var text = $(this).text();
+            alert(text)
+        });
+        $('ul li').off('click',function () {});
+        */
+        //delegate委托：点击当前标签后绑定并触发事件
+        $('ul').delegate('li','click',function () {
+            var text = $(this).text();
+            alert(text)
+        });
+        //$('ul').undelegate('li','click',function () {});
+
+    </script>
+</body>
+</html>

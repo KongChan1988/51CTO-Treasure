@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f77c7ca-5bbf-45c1-973d-ffc41a1799aa" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Selenium$DoIn.coverage" NAME="DoIn Coverage Results" MODIFIED="1538545056805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day03/IN" />
+    <SUITE FILE_PATH="coverage/Selenium$log_Demo.coverage" NAME="log_Demo Coverage Results" MODIFIED="1538559750999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day03/log" />
+    <SUITE FILE_PATH="coverage/Selenium$First_Demo.coverage" NAME="First_Demo Coverage Results" MODIFIED="1538315248705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day01" />
+    <SUITE FILE_PATH="coverage/Selenium$ComConfig.coverage" NAME="ComConfig Coverage Results" MODIFIED="1538636840997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame/Public/common" />
+    <SUITE FILE_PATH="coverage/Selenium$DoExcel__1_.coverage" NAME="DoExcel (1) Coverage Results" MODIFIED="1538635544928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame/Public/common" />
+    <SUITE FILE_PATH="coverage/Selenium$Settings.coverage" NAME="Settings Coverage Results" MODIFIED="1538634288925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame/config" />
+    <SUITE FILE_PATH="coverage/Selenium$log.coverage" NAME="log Coverage Results" MODIFIED="1538634426956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame/LOG" />
+    <SUITE FILE_PATH="coverage/Selenium$test_suite.coverage" NAME="test_suite Coverage Results" MODIFIED="1538494574442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/UnitTest" />
+    <SUITE FILE_PATH="coverage/Selenium$run.coverage" NAME="run Coverage Results" MODIFIED="1559265136573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame" />
+    <SUITE FILE_PATH="coverage/Selenium$TC_BaiduSearch.coverage" NAME="TC_BaiduSearch Coverage Results" MODIFIED="1538643644056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame/TestCase" />
+    <SUITE FILE_PATH="coverage/Selenium$CSS.coverage" NAME="CSS定位元素 Coverage Results" MODIFIED="1538359639849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day01" />
+    <SUITE FILE_PATH="coverage/Selenium$Do_Excel.coverage" NAME="Do_Excel Coverage Results" MODIFIED="1538551860847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day03/DoExcel" />
+    <SUITE FILE_PATH="coverage/Selenium$Unittests_for_Test_Case_TestRun_testDown.coverage" NAME="Unittests for Test_Case.TestRun.testDown Coverage Results" MODIFIED="1538470738222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/PO_Demo" />
+    <SUITE FILE_PATH="coverage/Selenium$baidu.coverage" NAME="baidu Coverage Results" MODIFIED="1538643797767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame/Public/pages" />
+    <SUITE FILE_PATH="coverage/Selenium$Unittests_for_baidu_Baidu_testBaidu_search.coverage" NAME="Unittests for baidu.Baidu.testBaidu_search Coverage Results" MODIFIED="1538493243388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/Email" />
+    <SUITE FILE_PATH="coverage/Selenium$send_email.coverage" NAME="send_email Coverage Results" MODIFIED="1538479811646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/Email" />
+    <SUITE FILE_PATH="coverage/Selenium$Demo2.coverage" NAME="Demo2 Coverage Results" MODIFIED="1538472140962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day01" />
+    <SUITE FILE_PATH="coverage/Selenium$ReadConfigIni.coverage" NAME="ReadConfigIni Coverage Results" MODIFIED="1538636287238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame/Public/common" />
+    <SUITE FILE_PATH="coverage/Selenium$Unittests_in__py.coverage" NAME="Unittests in 多个测试类的控制.py Coverage Results" MODIFIED="1538411237476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02" />
+    <SUITE FILE_PATH="coverage/Selenium$Unittests_in_baidu_py.coverage" NAME="Unittests in baidu.py Coverage Results" MODIFIED="1538495040623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/Email" />
+    <SUITE FILE_PATH="coverage/Selenium$Unittests_for_baidu_Baidu.coverage" NAME="Unittests for baidu.Baidu Coverage Results" MODIFIED="1538492140208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/Email" />
+    <SUITE FILE_PATH="coverage/Selenium$Cookie.coverage" NAME="Cookie操作 Coverage Results" MODIFIED="1538384335648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day01" />
+    <SUITE FILE_PATH="coverage/Selenium$Unittests_for_Test_Case_TestRun.coverage" NAME="Unittests for Test_Case.TestRun Coverage Results" MODIFIED="1538471113280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/PO_Demo" />
+    <SUITE FILE_PATH="coverage/Selenium$DoExcel.coverage" NAME="DoExcel Coverage Results" MODIFIED="1538566594682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AutoRunFrame/Public" />
+    <SUITE FILE_PATH="coverage/Selenium$Search.coverage" NAME="Search Coverage Results" MODIFIED="1538465230598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/PO_Demo" />
+    <SUITE FILE_PATH="coverage/Selenium$Unittests_in_Test_Case_py.coverage" NAME="Unittests in Test_Case.py Coverage Results" MODIFIED="1538469919067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day02/PO_Demo" />
+    <SUITE FILE_PATH="coverage/Selenium$_.coverage" NAME="等待时间_显示等待 Coverage Results" MODIFIED="1538369736724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day01" />
+    <SUITE FILE_PATH="coverage/Selenium$.coverage" NAME="上传文件 Coverage Results" MODIFIED="1559265286979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day01" />
+    <SUITE FILE_PATH="coverage/Selenium$log_class.coverage" NAME="log_class Coverage Results" MODIFIED="1538561561810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day03/log" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AutoRunFrame/run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+              <folding>
+                <element signature="e#39#80#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendEmail.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AutoRunFrame/Public/common/SendEmail.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="899">
+              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+              <folding>
+                <element signature="e#39#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TC_BaiduSearch.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AutoRunFrame/TestCase/TC_BaiduSearch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <folding>
+                <element signature="e#39#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="上传文件.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Day01/上传文件.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#39#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="目标验证.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day01/目标验证.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding>
+                <element signature="e#71#101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Day01/First_Demo.py" />
+        <option value="$PROJECT_DIR$/Day01/Demo2.py" />
+        <option value="$PROJECT_DIR$/Day01/CSS定位元素.py" />
+        <option value="$PROJECT_DIR$/Day01/浏览器后退、前进.py" />
+        <option value="$PROJECT_DIR$/Day01/元素操作.py" />
+        <option value="$PROJECT_DIR$/Day01/鼠标操作.py" />
+        <option value="$PROJECT_DIR$/Day01/目标验证.py" />
+        <option value="$PROJECT_DIR$/Day01/等待时间_显示等待.py" />
+        <option value="$PROJECT_DIR$/Day01/隐士等待.py" />
+        <option value="$PROJECT_DIR$/Day01/Demo.html" />
+        <option value="$PROJECT_DIR$/Day01/定位一组元素.py" />
+        <option value="$PROJECT_DIR$/Day01/多表单切换.py" />
+        <option value="$PROJECT_DIR$/Day01/上传文件.py" />
+        <option value="$PROJECT_DIR$/Day01/弹出框的处理.py" />
+        <option value="$PROJECT_DIR$/Day01/Cookie操作.py" />
+        <option value="$PROJECT_DIR$/Day02/字符串替换.py" />
+        <option value="$PROJECT_DIR$/Day02/多个测试类的控制.py" />
+        <option value="$PROJECT_DIR$/Day02/UnitTest/StringReplaceTestCase.py" />
+        <option value="$PROJECT_DIR$/Day02/UnitTest/StringReplace.py" />
+        <option value="$PROJECT_DIR$/Day02/PO_Demo/Base_Page.py" />
+        <option value="$PROJECT_DIR$/Day02/PO_Demo/Search.py" />
+        <option value="$PROJECT_DIR$/Day02/PO_Demo/Test_Case.py" />
+        <option value="$PROJECT_DIR$/Day02/Email/send_email.py" />
+        <option value="$PROJECT_DIR$/Day02/UnitTest/test_suite.py" />
+        <option value="$PROJECT_DIR$/Day02/Email/baidu.py" />
+        <option value="$PROJECT_DIR$/Day03/IN/config.py" />
+        <option value="$PROJECT_DIR$/Day03/IN/DoIn.py" />
+        <option value="$PROJECT_DIR$/Day03/IN/config.ini" />
+        <option value="$PROJECT_DIR$/Day03/DoExcel/Do_Excel.py" />
+        <option value="$PROJECT_DIR$/Day03/log/log_Demo.py" />
+        <option value="$PROJECT_DIR$/Day03/log/log_class.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/config.ini" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/ReadConfigIni.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/DoExcel.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/TestCaseinfo.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/SendEmail.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/pages/BasePAGE.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/common/config.ini" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/config/config.ini" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/config/Settings.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/common/ReadConfigIni.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/common/ComConfig.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/common/TestCaseinfo.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/pages/BasePage.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/pages/baidu.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/common/SendEmail.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Public/common/DoExcel.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/TestCase/TC_BaiduSearch.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/LOG/log.py" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/Report/Log/2018-10-04.log" />
+        <option value="$PROJECT_DIR$/AutoRunFrame/run.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-490" />
+    <option name="y" value="35" />
+    <option name="width" value="1600" />
+    <option name="height" value="990" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Selenium自动化" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Selenium自动化" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Selenium自动化" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Selenium自动化" type="462c0819:PsiDirectoryNode" />
+              <item name="Day01" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../网易云课堂---接口自动化测试" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\python_work\51CTO_Python\Selenium自动化\AutoRunFrame\Data\TestData" />
+      <recent name="E:\python_work\51CTO_Python\Selenium自动化\AutoRunFrame\Public\common" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.baidu">
+    <configuration name="目标验证" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Selenium自动化" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day01" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day01/目标验证.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="TC_BaiduSearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Selenium自动化" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoRunFrame/TestCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoRunFrame/TestCase/TC_BaiduSearch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="上传文件" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Selenium自动化" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day01" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day01/上传文件.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="baidu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Selenium自动化" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoRunFrame/Public/pages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoRunFrame/Public/pages/baidu.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Selenium自动化" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AutoRunFrame" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AutoRunFrame/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.baidu" />
+      <item itemvalue="Python.TC_BaiduSearch" />
+      <item itemvalue="Python.run" />
+      <item itemvalue="Python.目标验证" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.目标验证" />
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.baidu" />
+        <item itemvalue="Python.TC_BaiduSearch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f77c7ca-5bbf-45c1-973d-ffc41a1799aa" name="Default" comment="" />
+      <created>1538154244628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538154244628</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_baidu_Baidu_testBaidu_search - 2018.10.02 at 22h 57m 00s.xml">
+      <configuration name="Unittests for baidu.Baidu.testBaidu_search" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_baidu_Baidu_testBaidu_search - 2018.10.02 at 23h 14m 27s.xml">
+      <configuration name="Unittests for baidu.Baidu.testBaidu_search" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2018.10.02 at 23h 21m 02s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2018.10.02 at 23h 24m 42s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2018.10.02 at 23h 28m 30s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2018.10.02 at 23h 30m 22s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2018.10.02 at 23h 33m 31s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2018.10.02 at 23h 40m 33s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2018.10.02 at 23h 43m 02s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2018.10.02 at 23h 44m 30s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28023598" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1802949" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39970502" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32890856" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Day01/等待时间_显示等待.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="55" lean-forward="true" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/Demo.html" />
+    <entry file="file://$PROJECT_DIR$/Day01/隐士等待.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="2" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/多表单切换.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" selection-start-line="2" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/弹出框的处理.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/截图文件/45d55631-5489-4605-a1f3-cb4eac7e5414.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/Cookie操作.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/字符串替换.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/多个测试类的控制.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1261">
+          <caret line="46" column="39" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/HTMLRun.htnl" />
+    <entry file="file://$PROJECT_DIR$/Day02/HTMLRun.html" />
+    <entry file="file://$PROJECT_DIR$/Day02/PO_Demo/Search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/定位一组元素.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/First_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/Demo2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/PO_Demo/Base_Page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1987">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/PO_Demo/Test_Case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/UnitTest/StringReplace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-624">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/Email/send_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1189">
+          <caret line="47" column="86" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/UnitTest/test_suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-377">
+          <caret line="2" selection-start-line="2" selection-end-line="19" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day02/Email/baidu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/IN/onfig.ini" />
+    <entry file="file://E:/python_version/python 3.6.4 64bit/Lib/configparser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="1014" selection-start-line="1014" selection-end-line="1014" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/log/log.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/log/test.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/log/logging.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/INI/DoIn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/INI/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/DoExcel/Do_Excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="3" selection-start-line="3" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/log/log_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day03/log/log_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Data/TestData/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="9" selection-start-line="1" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/LOG/2018-10-04.log" />
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/config/Settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="7" lean-forward="true" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/config/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="60" lean-forward="true" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/python_version/python 3.6.4 64bit/Lib/site-packages/selenium/webdriver/firefox/firefox_binary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1771">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Public/pages/BasePage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2636">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Public/pages/baidu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="34" selection-start-line="34" selection-start-column="2" selection-end-line="42" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Public/common/TestCaseinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Public/common/ReadConfigIni.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Public/common/ComConfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Public/common/DoExcel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Report/Log/2018-10-04.log" />
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/LOG/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/Public/common/SendEmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding>
+            <element signature="e#39#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding>
+            <element signature="e#39#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoRunFrame/TestCase/TC_BaiduSearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#39#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../第七模块学习/Day04/EdmureBlog/venv/Lib/site-packages/selenium/webdriver/common/service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../第七模块学习/Day04/EdmureBlog/venv/Lib/site-packages/selenium/webdriver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-832" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/目标验证.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#71#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day01/上传文件.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#39#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

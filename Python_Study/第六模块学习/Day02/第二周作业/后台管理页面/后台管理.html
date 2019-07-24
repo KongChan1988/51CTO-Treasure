@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyPDSS Admin</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: "Arial","Microsoft YaHei","微软雅黑";
+            font-size: 12px;
+            line-height: 24px;
+            background: #f8f8f8;
+            overflow-y: scroll;
+        }
+        h1, h2, h3, form, img, ul, ol, li, dl, dt, dd, div, span, p {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            font-style: normal;
+            font-weight: normal;
+        }
+        .heard{
+            height: 40px;
+            width: 100%;
+            background-color: #1b1b1b;
+            position: fixed;
+            top: 0;
+        }
+        .heard h2{
+            float: left;
+            color: #999999;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .heard h3{
+            float: left;
+            color: #999999;
+            font-size: 15px;
+            padding: 10px;
+        }
+        .heard a{
+            display: block;
+            float: right;
+            font-size: 15px;
+            padding: 10px;
+            color: #999999;
+        }
+        a{
+            text-decoration: none;
+        }
+        .heard a:hover{
+            color: #3babf7;
+        }
+        .body-left{
+            float: left;
+            height: 100%;
+            width: 200px;
+            border: 1px solid #e3e3e3;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .body-left dt{
+            /*background-color: #3babf7;*/
+            color: #3babf7;
+            font-size: 16px;
+            font-weight: bold;
+            width: 150px;
+            line-height: 25px;
+            margin: 10px auto;
+        }
+        .body-left dd{
+            /*background-color: #3babf7;*/
+            font-size: 15px;
+            font-weight: bold;
+            width: 150px;
+        }
+        .body-left a{
+            color: #969696;
+            padding-left: 55px;
+        }
+        .body-left dd a:hover{
+            color: brown;
+        }
+        .body-right{
+            /*border: 1px solid red;*/
+            height: 100%;
+            margin: 0 280px auto;
+            width: 1200px;
+            font-size: 15px;
+            color: #333333;
+        }
+        .change{
+            background-color: #f5f5f5;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            color: #3babf7;
+        }
+        .body-right li{
+            display: inline-block;
+            line-height: 38px;
+            text-align: center;
+            height: 38px;
+            width: 100px;
+            margin-bottom: -1px;
+        }
+        .body-right ul{
+            float: left;
+            border-bottom: 1px solid #ddd;
+            list-style: none;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .input-text{
+            height: 25px;
+            width: 350px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #dddddd;
+            max-font-size: 15;
+        }
+        .input-button{
+            height: 35px;
+            width: 66px;
+            margin-left: -5px;
+        }
+        .select-ul li:hover{
+            color: brown;
+        }
+        table{
+            display: table;
+            border: 1px solid #dddddd;
+            height: 540px;
+            width: 120%;
+            border-spacing: 0;
+            border-radius: 5px;
+
+        }
+        table tbody{
+            width: 100%;
+        }
+        table thead{
+            width: 100%;
+        }
+        table th{
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            font-size: 15px;
+            height: 50px;
+            width: 60px;
+        }
+        table td{
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            text-align: center;
+
+        }
+        td a{
+            color: #3babf7
+        }
+        .check-button{
+            height: 40px;
+            width: 80px;
+            margin-right: 10px;
+        }
+        .top{
+            position: fixed;
+            right: 0;
+            height: 50px;
+            width: 50px;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--头部标题栏-->
+    <div class="heard" >
+        <div style="width: 90%;height: 100%;margin: 0 auto">
+            <h2>MyPDSS-管理平台</h2>
+            <div style="float: right;width: 180px">
+                <h3>欢迎 测试管理员</h3>
+                <a href="登录.html" >退出</a>
+            </div>
+        </div>
+    </div>
+    <!--内容-->
+    <div style="height: 1000px;margin-top: 65px;margin-left: 45px">
+        <!--左边菜单内容-->
+        <div class="body-left">
+            <dl>
+                <dt id = "i1" onclick="showMenu('i1')">订单管理</dt>
+                <div>
+                    <dd><a href="">订单列表</a></dd>
+                    <dd><a>退款列表</a></dd>
+                    <dd><a>发货列表</a></dd>
+                </div>
+
+                <dt id = "i2" onclick="showMenu('i2')">轮播图管理</dt>
+                <div>
+                    <dd><a href="http://mtest.azarila.cn/mypdss-admin/order/list.action">首页轮播图</a></dd>
+                    <dd><a>添加轮播图</a></dd>
+                </div>
+
+
+                <dt id = "i3" onclick="showMenu('i3')">产品管理</dt>
+                <div>
+                    <dd><a href="http://mtest.azarila.cn/mypdss-admin/order/list.action">产品列表</a></dd>
+                    <dd><a>添加产品</a></dd>
+                    <dd><a>共享产品库</a></dd>
+                </div>
+
+                <dt id = "i4" onclick="showMenu('i4')">类目管理</dt>
+                <div>
+                    <dd><a href="http://mtest.azarila.cn/mypdss-admin/order/list.action">类目列表</a></dd>
+                    <dd><a>添加类目</a></dd>
+                    <dd><a>列表缓存</a></dd>
+                </div>
+
+                <dt id = "i5" onclick="showMenu('i5')">活动管理</dt>
+                <div>
+                    <dd><a href="http://mtest.azarila.cn/mypdss-admin/order/list.action">活动列表</a></dd>
+                    <dd><a>添加活动</a></dd>
+                </div>
+
+                <dt id = "i6" onclick="showMenu('i6')">仓库管理</dt>
+                <div>
+                    <dd><a href="http://mtest.azarila.cn/mypdss-admin/order/list.action">仓库列表</a></dd>
+                    <dd><a>添加仓库</a></dd>
+                    <dd><a>商品库存详情</a></dd>
+                </div>
+
+                <dt id = "i7" onclick="showMenu('i7')">用户管理</dt>
+                <div>
+                    <dd><a href="http://mtest.azarila.cn/mypdss-admin/order/list.action">用户列表</a></dd>
+                    <dd><a>提现管理</a></dd>
+                    <dd><a>发放奖励</a></dd>
+                </div>
+
+                <dt id = "i8" onclick="showMenu('i8')">系统设置</dt>
+                <div>
+                    <dd><a href="http://mtest.azarila.cn/mypdss-admin/order/list.action">系统列表</a></dd>
+                    <dd><a>账号权限列表</a></dd>
+                </div>
+
+                <dt id = "i9" onclick="showMenu('i9')">商城管理</dt>
+                <div>
+                    <dd><a href="http://mtest.azarila.cn/mypdss-admin/order/list.action">商城基本配置</a></dd>
+                    <dd><a>首页展示</a></dd>
+                    <dd><a>常见问题</a></dd>
+                </div>
+            </dl>
+        </div>
+        <!--右边详情内容-->
+        <div class="body-right">
+            <!--详情标题-->
+            <div style="height: 38px;">
+                <ul>
+                    <li class="change" id="l1" onclick="changex('l1')" >
+                        <a>待发货</a>
+                    </li>
+                    <li onclick="changex('l2')" id = 'l2' ><a>已发货</a></li>
+                    <li onclick="changex('l3')" id = 'l3' ><a>已完成</a></li>
+                    <li onclick="changex('l4')" id = 'l4' ><a>全部</a></li>
+                </ul>
+            </div>
+            <!--搜索-->
+            <div style="height: 38px;margin: 40px auto">
+                <input type="text" class="input-text"/>
+                <div style="display: inline-block">
+                    <input type="button"  class="input-button" value="搜索" onclick="show1()" id = 'b1'/>
+                    <ul class="select-ul hide">
+                        <li><a>订单ID搜索</a></li>
+                        <li><a>手机号搜索</a></li>
+                        <li><a>用户ID搜索</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--全选反选框-->
+            <div style="height: 40px;margin-bottom: 10px;">
+                <input type="button" value="全选" class="check-button" onclick="check_all()" id = "c1">
+                <input type="button" value="反选" class="check-button" onclick="is_check()" id = 'c2'>
+                <input type="button" value="取消" class="check-button" onclick="no_check()" id = 'c3'>
+
+            </div>
+            <!--订单列表-->
+            <table >
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>订单ID</th>
+                        <th>订单编号</th>
+                        <th>用户名</th>
+                        <th>用户ID</th>
+                        <th>状态</th>
+                        <th>总金额</th>
+                        <th>微信支付</th>
+                        <th>余额支付</th>
+                        <th>红包</th>
+                        <th>运费</th>
+                        <th>联系人</th>
+                        <th>手机号</th>
+                        <th>地址</th>
+                        <th>购买时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>254615</td>
+                        <td><a>20171221254615</a></td>
+                        <td>花生</td>
+                        <td>1541509</td>
+                        <td>已支付</td>
+                        <td>398.0</td>
+                        <td>0.0</td>
+                        <td>180.0</td>
+                        <td>218.0</td>
+                        <td>0.0</td>
+                        <td>尹丹璐</td>
+                        <td>18949945501</td>
+                        <td>上海市上海市闵行区中春路8923号欧莱雅商务中心B308</td>
+                        <td>2017-12-21 14:00:17</td>
+                        <td>
+                            <a>详情</a>
+                            <br/>
+                            <a>修改收货信息</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>254615</td>
+                        <td><a>20171221254615</a></td>
+                        <td>花生</td>
+                        <td>1541509</td>
+                        <td>已支付</td>
+                        <td>398.0</td>
+                        <td>0.0</td>
+                        <td>180.0</td>
+                        <td>218.0</td>
+                        <td>0.0</td>
+                        <td>尹丹璐</td>
+                        <td>18949945501</td>
+                        <td>上海市上海市闵行区中春路8923号欧莱雅商务中心B308</td>
+                        <td>2017-12-21 14:00:17</td>
+                        <td>
+                            <a >详情</a>
+                            <br/>
+                            <a>修改收货信息</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>254615</td>
+                        <td><a>20171221254615</a></td>
+                        <td>花生</td>
+                        <td>1541509</td>
+                        <td>已支付</td>
+                        <td>398.0</td>
+                        <td>0.0</td>
+                        <td>180.0</td>
+                        <td>218.0</td>
+                        <td>0.0</td>
+                        <td>尹丹璐</td>
+                        <td>18949945501</td>
+                        <td>上海市上海市闵行区中春路8923号欧莱雅商务中心B308</td>
+                        <td>2017-12-21 14:00:17</td>
+                        <td>
+                            <a >详情</a>
+                            <br/>
+                            <a>修改收货信息</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>254615</td>
+                        <td><a>20171221254615</a></td>
+                        <td>花生</td>
+                        <td>1541509</td>
+                        <td>已支付</td>
+                        <td>398.0</td>
+                        <td>0.0</td>
+                        <td>180.0</td>
+                        <td>218.0</td>
+                        <td>0.0</td>
+                        <td>尹丹璐</td>
+                        <td>18949945501</td>
+                        <td>上海市上海市闵行区中春路8923号欧莱雅商务中心B308</td>
+                        <td>2017-12-21 14:00:17</td>
+                        <td>
+                            <a >详情</a>
+                            <br/>
+                            <a>修改收货信息</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>254615</td>
+                        <td><a>20171221254615</a></td>
+                        <td>花生</td>
+                        <td>1541509</td>
+                        <td>已支付</td>
+                        <td>398.0</td>
+                        <td>0.0</td>
+                        <td>180.0</td>
+                        <td>218.0</td>
+                        <td>0.0</td>
+                        <td>尹丹璐</td>
+                        <td>18949945501</td>
+                        <td>上海市上海市闵行区中春路8923号欧莱雅商务中心B308</td>
+                        <td>2017-12-21 14:00:17</td>
+                        <td>
+                            <a >详情</a>
+                            <br/>
+                            <a>修改收货信息</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>254615</td>
+                        <td><a>20171221254615</a></td>
+                        <td>花生</td>
+                        <td>1541509</td>
+                        <td>已支付</td>
+                        <td>398.0</td>
+                        <td>0.0</td>
+                        <td>180.0</td>
+                        <td>218.0</td>
+                        <td>0.0</td>
+                        <td>尹丹璐</td>
+                        <td>18949945501</td>
+                        <td>上海市上海市闵行区中春路8923号欧莱雅商务中心B308</td>
+                        <td>2017-12-21 14:00:17</td>
+                        <td>
+                            <a >详情</a>
+                            <br/>
+                            <a>修改收货信息</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>254615</td>
+                        <td><a>20171221254615</a></td>
+                        <td>花生</td>
+                        <td>1541509</td>
+                        <td>已支付</td>
+                        <td>398.0</td>
+                        <td>0.0</td>
+                        <td>180.0</td>
+                        <td>218.0</td>
+                        <td>0.0</td>
+                        <td>尹丹璐</td>
+                        <td>18949945501</td>
+                        <td>上海市上海市闵行区中春路8923号欧莱雅商务中心B308</td>
+                        <td>2017-12-21 14:00:17</td>
+                        <td>
+                            <a >详情</a>
+                            <br/>
+                            <a>修改收货信息</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>254615</td>
+                        <td><a>20171221254615</a></td>
+                        <td>花生</td>
+                        <td>1541509</td>
+                        <td>已支付</td>
+                        <td>398.0</td>
+                        <td>0.0</td>
+                        <td>180.0</td>
+                        <td>218.0</td>
+                        <td>0.0</td>
+                        <td>尹丹璐</td>
+                        <td>18949945501</td>
+                        <td>上海市上海市闵行区中春路8923号欧莱雅商务中心B308</td>
+                        <td>2017-12-21 14:00:17</td>
+                        <td>
+                            <a >详情</a>
+                            <br/>
+                            <a>修改收货信息</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--返回顶部栏-->
+    <div class="top">
+        <a href="#top">
+            <img src="picture/index.png" style="height: 50px;width: 50px;background-color: #969696;border-radius: 5px">
+        </a>
+    </div>
+    <script>
+        function showMenu(num) {
+            var dt_id = document.getElementById(num);
+            var dl = dt_id.parentElement;
+            var div_list = dl.getElementsByTagName('div');
+
+            for(var i=0;i<div_list.length;i++){
+                var current = div_list[i];
+                current.classList.add('hide')
+            }
+            dt_id.nextElementSibling.classList.remove('hide')
+        }
+        function changex(num) {
+            var l1 = document.getElementById(num);
+            var ul = l1.parentElement;
+            var l1_list = ul.children;
+            for (var i=0;i<l1_list.length;i++){
+                var current = l1_list[i];
+                current.classList.remove('change')
+            }
+            l1.classList.add('change')
+        }
+        function show1() {
+            var button = document.getElementById('b1');
+            var button_ul = button.nextElementSibling;
+            if(button_ul.classList[1]=== 'hide'){
+                console.log(button_ul.classList[1]);
+                button_ul.classList.remove('hide')
+            }else {
+                button_ul.classList.add('hide')
+            }
+
+        }
+        function check_all() {
+            var c_input = document.getElementById('c1');
+            var t_body = c_input.parentElement.nextElementSibling.getElementsByTagName('tbody');
+            // 遍历出所有tbody标签
+            for(var x=0;x<t_body.length;x++){
+                var tbody = t_body[x];
+            }
+            // 遍历出所有tbody标签下的tr标签和checkbox标签
+            var tr_list = tbody.getElementsByTagName('tr');
+            for(var i=0;i<tr_list.length;i++){
+                var current = tr_list[i];
+                var checkbox = current.children[0].children[0];
+                checkbox.checked = true;   //在所有checkbox标签上打上对勾
+            }
+        }
+        function no_check() {
+            var c_input = document.getElementById('c3');
+            var t_body = c_input.parentElement.nextElementSibling.getElementsByTagName('tbody');
+            // 遍历出所有tbody标签
+            for(var x=0;x<t_body.length;x++){
+                var tbody = t_body[x];
+            }
+            // 遍历出所有tbody标签下的tr标签和checkbox标签
+            var tr_list = tbody.getElementsByTagName('tr');
+            for(var i=0;i<tr_list.length;i++){
+                var current = tr_list[i];
+                var checkbox = current.children[0].children[0];
+                checkbox.checked = false;   //在所有checkbox标签上消除对勾
+            }
+        }
+        function is_check() {
+            var c_input = document.getElementById('c2');
+            var t_body = c_input.parentElement.nextElementSibling.getElementsByTagName('tbody');
+            // 遍历出所有tbody标签
+            for(var x=0;x<t_body.length;x++){
+                var tbody = t_body[x];
+            }
+            // 遍历出所有tbody标签下的tr标签和checkbox标签
+            var tr_list = tbody.getElementsByTagName('tr');
+            for(var i=0;i<tr_list.length;i++){
+                var current = tr_list[i];
+                var checkbox = current.children[0].children[0];
+                if(checkbox.checked){
+                    checkbox.checked = false;   //在所有checkbox标签上消除对勾
+                }else{
+                    checkbox.checked = true;   //在所有checkbox标签上打上对勾
+                }
+            }
+        }
+    </script>
+</body>
+</html>

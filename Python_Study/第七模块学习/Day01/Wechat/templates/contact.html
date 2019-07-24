@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h1>发送消息</h1>
+        <p>接收者:<input type="text" id="touser" /></p>
+        <p>内容:<input type="text" id="msg" /></p>
+        <input type="button" value="发送" id="btn" />
+    </div>
+    <div>
+        <h1>联系人列表</h1>
+        <ul>
+            {% for item in contact_dict.MemberList %}
+            <li>{{ item.UserName }}------------{{ item.NickName }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="/static/jquery1.12.4.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                var touser = $('#touser').val();
+                var msg = $('#msg').val();
+                $.ajax({
+                    url:"/send_msg/",
+                    type:"GET",
+                    data:{"touser":touser,"msg":msg},
+                    success:function (arg) {
+                        console.log(arg)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

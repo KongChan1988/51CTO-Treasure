@@ -1,0 +1,68 @@
+bind1:
+  host_name: server1
+  remote_users:
+    - user0:
+      username: root
+      auth_type: ssh-password
+      password: 123456
+  groups:
+    - bj_group
+  user_profiles:
+    - sean
+
+bind2:
+  host_name: server2
+  remote_users:
+    - user0:
+      username: root
+      auth_type: ssh-password
+      password: 123456
+  groups:
+    - bj_group
+    - sh_group
+  user_profiles:
+    - sean
+    - jack
+
+bind3:
+  host_name: server3
+  remote_users:
+    - user0:
+      username: root
+      auth_type: ssh-password
+      password: 123456
+  groups:
+    - bj_group
+    - sh_group
+  user_profiles:
+    - sean
+    - jack
+
+bind4:
+  host_name: server2
+  remote_users:
+    - user2:
+      username: colin
+      auth_type: ssh-password
+      password: 123@123
+  groups:
+    - web_servers
+  user_profiles:
+    - root
+
+bind5:
+  host_name: server3
+  remote_users:
+    - user3:
+      username: web
+      auth_type: ssh-password
+      password: 12345678
+    - user1:
+      username: mysql
+      auth_type: ssh-password
+      password: 12345678
+  groups:
+    - web_servers
+    - db_servers
+  user_profiles:
+    - root

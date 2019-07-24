@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/cmdb/login/">
+        {% csrf_token %}
+        <p>{{ obj.as_p }}</p>
+        <input type="submit" value="提交" placeholder=""/>
+    </form>
+</body>
+</html>

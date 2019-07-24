@@ -1,0 +1,23 @@
+user0:
+  auth_type:  ssh-password
+  username: root
+  password: 123456
+
+user1:
+  auth_type:  ssh-password
+  username: mysql
+  password: 12345678
+
+user2:
+  auth_type:  ssh-password
+  username: colin
+  password: 123@123
+
+user3:
+  auth_type:  ssh-password
+  username: web
+  password: 12345678
+
+user4:
+  auth_type:  ssh-key
+  username: root

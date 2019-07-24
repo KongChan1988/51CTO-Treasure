@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="bxslider-4-master/dist/jquery.bxslider.css" rel="stylesheet">
+</head>
+<body>
+    <ul class="bxslider">
+        <li><img src="picture/A.jpg" /></li>
+        <li><img src="picture/B.jpg" /></li>
+        <li><img src="picture/C.jpg" /></li>
+        <li><img src="picture/A.jpg" /></li>
+        <li><img src="picture/C.jpg" /></li>
+    </ul>
+    <script src="jquery1.12.4.js"></script>
+    <script src="bxslider-4-master/dist/jquery.bxslider.js"></script>
+    <script>
+        // $(function(){
+        //
+        // });
+        $(function () {
+            //<!--普通轮播图-->
+            // $('.bxslider').bxSlider({auto: true, autoControls: true});
+
+            //这个轮播效果不错
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                captions: true,
+                slideWidth: 800
+              });
+
+            //<!--横向旋转木马轮播-->
+            // $('.slider1').bxSlider({auto: true, slideWidth: 200, minSlides: 2, maxSlides: 3, slideMargin: 10});
+
+            // //<!--纵向旋转木马轮播-->
+            // $('.slider8').bxSlider({
+            //     mode: 'vertical',
+            //     slideWidth: 300,
+            //     minSlides: 2,
+            //     slideMargin: 10
+            // });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/app03/login/" method="post">
+        {% csrf_token %}
+        <p>{{ obj.user}}</p>
+        <p>{{ obj.pwd}}</p>
+        <p>{{ obj.email}}</p>
+        <p><input type="submit" value="提交"/></p>
+    </form>
+
+</body>
+</html>

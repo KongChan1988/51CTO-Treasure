@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="submit" value="提交" onclick="submitFrom()"/>
+    <script>
+        function submitFrom() {
+            // alert(123)  弹出信息框
+            var v = confirm("真的要删除嘛");  //弹出一个对话框 v:表示一个操作的返回值布尔类型  v = true or false
+            // console.log(v)
+
+            location.href;  //获取当前URL
+            location.href = "新URL"; //重定向 跳转至新URL
+            location.reload();   //页面刷新  等同于 location.href = location.href;
+        }
+        //设置一个定时器 每1秒执行一次
+         var obj = setInterval(function () {
+                console.log(1);
+                clearInterval(obj);  //执行console.log(1) 后 立马删除定时器obj
+            },1000);
+        //设置一个定时器 5秒执行一次  且只执行一次
+        setTimeout(function () {
+            console.log('timeout')
+        },5000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyPDSS Admin</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: "Arial","Microsoft YaHei","微软雅黑";
+            font-size: 12px;
+            line-height: 24px;
+            background: #f8f8f8;
+            overflow-y: scroll;
+        }
+        h1, h2, h3, form, img, ul, ol, li, dl, dt, dd, div, span, p {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            font-style: normal;
+            font-weight: normal;
+        }
+        .D{
+            border: 1px solid #cccccc;
+            height: 235px;
+            width: 315px;
+            margin: 45px auto;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .D h2{
+            font-size: 32px;
+            line-height: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .D input{
+            display: inline-block;
+            height: auto;
+            width: 250px;
+            margin-bottom: 25px;
+            padding: 10px 25px 10px 10px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            font-size: 16px;
+        }
+        .D-submit{
+            color: #fff;
+            background-color: #006dcc;
+            text-align: center;
+            line-height: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form rel="/login/" method="post">
+        <div class="D">
+            <h2>Please sign in </h2>
+            <input type="text"  name = "user" placeholder="admin ID"/>
+            <input type="password" name = "password" placeholder="password"/>
+            <p>
+                <input  type="submit" value="Sign in" class="D-submit" style="height: 45px;width: 95px;padding-left: 15px"/>
+                <span style="color: red;font-size: 15px">{{ error_mesg }}</span>
+            </p>
+        </div>
+    </form>
+</body>
+</html>

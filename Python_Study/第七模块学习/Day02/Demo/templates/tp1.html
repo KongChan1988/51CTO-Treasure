@@ -1,0 +1,28 @@
+{% extends "母版.html" %}
+{% block title %}主机列表{% endblock %}
+{% block css %}
+    <style>
+        .pagent .page{
+            margin-right: 10px;
+            background-color: antiquewhite;
+            font-size: 18px;
+        }
+        .pagent .page.active{
+            background-color: brown;
+            color: white;
+        }
+    </style>
+{% endblock %}
+{% block crount %}
+    <ul>
+        {% for i in list %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+    <div class="pagent">
+        {{ page_str }}
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="/static/jquery1.12.4.js"></script>
+{% endblock %}

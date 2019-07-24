@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var xo = 'alex';
+        function  func1() {
+            var xo = 'eric';
+            function inner() {
+                console.log('xo');
+            }
+            return inner;    //执行返回结果是 eric
+        }
+        var ret1 = func1();
+        ret1();
+
+        function  func2() {
+            var xo = 'eric';
+            function inner() {
+                console.log('xo');
+            }
+            var xo = 'alex';
+            return inner;    //执行返回结果是 alex
+        }
+        var ret2 = func2();
+        ret2();
+    </script>
+</body>
+</html>

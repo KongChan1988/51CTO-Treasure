@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/plugins/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/static/css/edmure.css"/>
+    <link rel="stylesheet" href="/static/css/commons.css"/>
+    <link rel="stylesheet" href="/static/css/row-avatar.css"/>
+    <link rel="stylesheet" href="/static/css/theme/default.css"/>
+    {% block css %}{% endblock %}
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="/static/plugins/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="pg-header">
+    <div class="nick"></div>
+    <div class="menu-list">
+        <a class="menu-item">首页</a>
+        <a class="menu-item">个人首页</a>
+        <a class="menu-item">管理</a>
+    </div>
+</div>
+<div class="pg-body">
+    <div class="body-menu">
+        <div class="notice">
+            <div class="notice-header">公告</div>
+            <div class="notice-body">
+                <ul>
+                    <li>昵称：一米八大高个</li>
+                    <li>粉丝：100</li>
+                    <li>关注：88</li>
+                    <li>博龄：2014-11-11</li>
+                    <li>邮箱：yimidagaoge@live.com</li>
+                </ul>
+                <div class="memo">
+                    真实是人生的命脉，是一切价值的根基。
+                </div>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tags-header">标签</div>
+            <div class="tags-body">
+                <ul>
+                    <li>姑娘(66)</li>
+                    <li>旅行(100)</li>
+                    <li>coding(88)</li>
+                    <li>Python(90)</li>
+                    <li>约约约(8)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="types">
+            <div class="types-header">分类</div>
+            <div class="types-body">
+                <ul>
+                    <li>Python(66)</li>
+                    <li>自动化(100)</li>
+                    <li>LeetCode(88)</li>
+                    <li>运维(90)</li>
+                    <li>架构(8)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="dates">
+            <div class="dates-header">时间</div>
+            <div class="dates-body">
+                <ul>
+                    <li>2014年12月(88)</li>
+                    <li>2014年11月(8)</li>
+                    <li>2014年8月(8)</li>
+                    <li>2013年11月(3)</li>
+                    <li>2011年11月(1)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="body-content">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+    {% block js %}{% endblock %}
+</body>
+</html>

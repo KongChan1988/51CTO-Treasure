@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id = 'f1' action="JQ3.html" method="post">
+        <div><input type="text" /></div>
+        <div><input type="password" /></div>
+        <input type="submit" value="提交"/>
+    </form>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $(function () {
+            $(':submit').click(function () {
+                var flag = true;
+                $('.error').remove();
+                $('#f1').find("input[type='text'],input[type='password']").each(function () {
+                    var v = $(this).val();
+                    if(v.length<=0){
+                        flag = false;
+                        var tag = document.createElement('span');
+                        tag.classList.add('error');
+                        tag.innerText = "必填";
+                        $(this).after(tag);
+                        return false;
+                    }
+                });
+                return flag;
+            })
+        })
+    </script>
+</body>
+</html>

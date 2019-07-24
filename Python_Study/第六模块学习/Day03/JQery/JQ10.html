@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text"/>
+    <input type="button" value="添加" id = "t1"/>
+    <input type="button" value="删除" id = "t2"/>
+    <input type="button" value="复制" id = "t3"/>
+    <ul id = "u1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $('#t1').click(function () {
+            var v = $("input[type='text']").val();   //获取text文本框中内容
+            var tag = "<li>" + v + "</li>";
+            $('#u1').append(tag);
+            /*
+                $('#u1').append(tag);    append():在列表最后一行开始添加数据
+                $('#u1').prepend(tag);   prepend():从最上面开始加数据
+                $('#u1').after(tag);     after():在u1的下面添加li数据   此时u1和li属于同级
+                $('#u1').before(tag);    before():在u1的上面添加li数据    此时u1和li属于同级
+            */
+        });
+        $('#t2').click(function () {
+            var index = $("input[type='text']").val();
+            $('#u1 li').eq(index).remove();   //删除整个标签
+            //$('#u1 li').eq(index).empty();    empty():只删除内容，标签保留
+        });
+        $('#t3').click(function () {
+            var index = $("input[type='text']").val();
+            var v = $('#u1 li').eq(index).clone();      //获取相应序号的标签并复制  clone()：复制标签
+            $('#u1').append(v)      //append():在列表最后一行开始添加数据
+        })
+    </script>
+</html>

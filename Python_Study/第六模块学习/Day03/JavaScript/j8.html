@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id ='status'></div>
+    <input type="button" value="提交" onclick="deleteEle()"/>
+    <script>
+        function deleteEle() {
+            document.getElementById('status').innerText = "已删除";  //在id = status 标签中追加文本“已删除”信息
+            setTimeout(function () {
+                document.getElementById('status').innerText = "";   //设置一个定时任务2秒后将id = status标签文本内容清空
+            },2000);
+        }
+        //clearTimeout()    清除timeout定时器
+    </script>
+</body>
+</html>

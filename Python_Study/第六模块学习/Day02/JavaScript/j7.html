@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="全选" onclick="choseall()"/>
+    <input type="button" value="取消" onclick="noall()"/>
+    <input type="button" value="反选" onclick="removeall()"/>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>选择</th>
+                <th>主机名</th>
+                <th>端口号</th>
+            </tr>
+        </thead>
+        <tbody id="db">
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>1.1.1.0</td>
+                <td>6969</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>1.1.1.1</td>
+                <td>6806</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>1.1.1.2</td>
+                <td>8806</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function choseall() {
+            var tbody = document.getElementById('db');
+            var tr_list = tbody.children;  //以列表形式显示所有的tr标签
+            // 循环遍历所有tr标签
+            for (var i=0;i<tr_list.length;i++){
+                var current_tr = tr_list[i];
+                var checkbox = current_tr.children[0].children[0];   //遍历出所有checkbox标签
+                console.log(checkbox);
+                checkbox.checked = true;    //将所有checkbox标签打上对勾
+
+            }
+        }
+        function noall() {
+            var tbody = document.getElementById('db');
+            var tr_list = tbody.children;  //以列表形式显示所有的tr标签
+            // 循环遍历所有tr标签
+            for (var i=0;i<tr_list.length;i++){
+                var current_tr = tr_list[i];
+                var checkbox = current_tr.children[0].children[0];   //遍历出所有checkbox标签
+                checkbox.checked = false;    //将所有checkbox标签取消对勾
+            }
+        }
+        function removeall() {
+            var tbody = document.getElementById('db');
+            var tr_list = tbody.children;  //以列表形式显示所有的tr标签
+            // 循环遍历所有tr标签
+            for (var i=0;i<tr_list.length;i++){
+                var current_tr = tr_list[i];
+                var checkbox = current_tr.children[0].children[0];   //遍历出所有checkbox标签
+                //判断checkbox已经打上对勾了
+                if (checkbox.checked){
+                    checkbox.checked = false;
+                }else {
+                    checkbox.checked = true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

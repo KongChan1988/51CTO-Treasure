@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/commintes.css">
+    <style>
+        label{
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+        }
+        #username,#password{
+            border: 1px solid #eeeeee;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" rel="/login">
+        <p>
+        <label for="username">用户名：</label>
+        <input type="text" id = "username" name = "username" placeholder="用户名"/>
+        </p>
+        <p>
+            <label for="password">密码：</label>
+            <input type="password" id = "password" name = "password" placeholder="密码"/>
+        </p>
+        <p>
+            <span style="color: red">{{error_mesg}}</span>
+        </p>
+        <p>
+            <input type="submit" value="提交"/>
+        </p>
+    </form>
+    <script src="/static/jquery1.12.4.js"></script>
+</body>
+</html>

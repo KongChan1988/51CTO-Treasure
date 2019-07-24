@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点赞</title>
+    <style>
+        .container{
+            padding: 50px;
+            border: 1px solid #dddddd;
+        }
+        .item{
+            position: relative;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <span>赞</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <span>赞</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <span>赞</span>
+        </div>
+    </div>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $('.item').click(function () {
+            AddFavor(this);
+        });
+        function AddFavor(self) {
+            var fontSize = 15;
+            var top = 0;
+            var right = -10;
+            var opacity = 1;
+            var tag = document.createElement('span');
+            $(tag).text('+1');
+            $(tag).css('color','green');
+            $(tag).css('fontSize',fontSize + 'px');
+            $(tag).css('top',top + 'px');
+            $(tag).css('right',right + 'px');
+            $(tag).css('opacity',opacity);
+            $(tag).css('position','absolute');
+            $(self).append(tag);
+            var obj = setInterval(function () {
+                fontSize = fontSize + 5;
+                top = top - 5;
+                right = right - 5;
+                opacity = opacity -0.1;
+                $(tag).css('fontSize',fontSize + 'px');
+                $(tag).css('top',top + 'px');
+                $(tag).css('right',right + 'px');
+                $(tag).css('opacity',opacity);
+                if(opacity<0){
+                    clearInterval(obj);
+                    $(tag).remove();
+                }
+            },100);
+        }
+    </script>
+</body>
+</html>

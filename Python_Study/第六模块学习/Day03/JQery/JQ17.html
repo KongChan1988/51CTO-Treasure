@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="JQ3.html" method="post">
+        <input type="text"/>
+        <input type="submit" value="提交"/>
+    </form>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $(':submit').click(function () {
+            var v = $("input[type='text']").val();
+            if(v.length > 0){
+                return true;
+            }else {
+                alert('请输入内容');
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>

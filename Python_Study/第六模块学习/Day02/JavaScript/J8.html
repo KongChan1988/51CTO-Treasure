@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .item .heard{
+            background-color: #0b5ea5;
+            height: 35px;
+            width: 100px;
+            color: white;
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:150px">
+        <div class="item">
+            <div id = "i1" class="heard" onclick="showmenu('i1')">菜单一</div>
+            <div class="body">
+                <div>内容1</div>
+                <div>内容1</div>
+                <div>内容1</div>
+            </div>
+        </div>
+        <div class="item">
+            <div id = "i2" class="heard " onclick="showmenu('i2')">菜单二</div>
+            <div class="body hide">
+                <div>内容2</div>
+                <div>内容2</div>
+                <div>内容2</div>
+            </div>
+        </div>
+        <div class="item">
+            <div id = "i3" class="heard" onclick="showmenu('i3')">菜单三</div>
+            <div class="body hide">
+                <div>内容3</div>
+                <div>内容3</div>
+                <div>内容3</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showmenu(nid) {
+            var current_boder = document.getElementById(nid);  //获取当前标签的id
+            var item_list = current_boder.parentElement.parentElement.children;
+            //遍历循环所有item标签
+            for (var i=0;i<item_list.length;i++){
+                var current_item = item_list[i];
+                current_item.children[1].classList.add('hide'); //将所有item标签下的第二个div加上hide属性
+            }
+            current_boder.nextElementSibling.classList.remove('hide');//将当前标签下的第二个div去除hide属性
+        }
+    </script>
+</body>
+</html>

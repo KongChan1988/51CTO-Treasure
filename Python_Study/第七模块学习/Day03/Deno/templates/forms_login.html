@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/cmdb/login/">
+        {% csrf_token %}
+        <p>{{ obj.user }}</p>
+        <p>{{ obj.pwd }}</p>
+        <p>{{ obj.email }}<span style="color: red">{{ obj.email.errors.0 }}</span></p>
+        <p>{{ obj.user_type }}</p>
+        <p>{{ obj.user_type2 }}</p>
+        <input type="submit" value="提交" placeholder=""/>
+    </form>
+</body>
+</html>

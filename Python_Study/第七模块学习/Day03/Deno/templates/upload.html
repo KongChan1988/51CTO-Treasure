@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <style>
+        .upload{
+            display: inline-block;
+            position: absolute;
+            z-index: 90;
+            padding:4px 16px;
+            color:#fff;
+            font:14px "Microsoft YaHei", Verdana, Geneva, sans-serif;
+            cursor:pointer;
+            background-color:#0099ff;
+            line-height:30px;
+            text-align: center;
+            text-decoration:none;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .file{
+            display: inline-block;
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 30px;width: 60px;position: relative">
+        <input type="file" name="file" class="file" id="fml"/>
+        <a class="upload">浏览</a>
+    </div>
+    <input type="button" value="提交" id="ifml" style="margin-top: 15px"/>
+
+    <form method="post" action="/cmdb/upload_file/" enctype="multipart/form-data" target="file" >
+        {% csrf_token %}
+        <iframe id="iframe" name="file"></iframe>
+        <input type="file" id="file" name="file"/>
+        <input type="submit" value="Ajax提交" id="ajax"/>
+    </form>
+
+    <script src="/static/jquery1.12.4.js"></script>
+    <script src="/static/jquery.cookie.js"></script>
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $("#ajax").click(function () {
+               $("#iframe").load(function () {
+                   var text = $(this).contents().find("body").text();
+                   var obj = JSON.parse(text);
+                   console.log(obj)
+               })
+            });
+            $("#ifml").click(function () {
+                var obj = document.getElementById("fml").files[0];
+                var fd = new FormData();
+                fd.append("username","root");
+                fd.append("file",obj);
+                $.ajax({
+                    url:"/cmdb/upload_file/",
+                    type:"POST",
+                    data:fd,
+                    processData:false,
+                    contentType:false,
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    success:function (org) {
+                        console.log(org)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

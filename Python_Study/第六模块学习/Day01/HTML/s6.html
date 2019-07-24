@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <from>
+        <p>标准下拉框</p>
+        <select name="city" size="3">                 <!-- size:默认显示x个列表值-->
+            <option value="1">上海</option>
+            <option value="2">北京</option>
+            <option value="3" selected="selected">南京</option>   <!-- selected：设置默认值-->
+            <option value="4">东京</option>
+            <option value="5">西京</option>
+        </select>
+        <p>复选下拉框</p>
+        <select name="city2" size="3" multiple="multiple">  <!--multiple:按住ctrl可多选 -->
+            <option value="1">上海</option>
+            <option value="2">北京</option>
+            <option value="3" selected="selected">南京</option>   <!-- selected：设置默认值-->
+            <option value="4">东京</option>
+            <option value="5">西京</option>
+        </select>
+        <p>分组下拉框</p>
+        <select name="city3" size="4">
+            <optgroup label="河北省">             <!-- label:组名（不可选）-->
+                <option value="1">上海</option>
+                <option value="2">北京</option>
+            </optgroup>
+            <optgroup label="江苏省">
+                <option value="3" selected="selected">南京</option>   <!-- selected：设置默认值-->
+                <option value="4">东京</option>
+                <option value="5">西京</option>
+            </optgroup>
+        </select>
+    </from>
+    <br/>
+    <br/>
+    <input type="submit" value="提交"/>
+</body>
+</html>

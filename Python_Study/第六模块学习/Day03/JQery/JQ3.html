@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="全选"/>
+    <input type="button" value="反选"/>
+    <input type="button" value="取消"/>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>选项</th>
+                <th>IP</th>
+                <th>端口</th>
+            </tr>
+        </thead>
+        <tbody id = 'tb'>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1.1.1</td>
+                <td>6969</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1.1.1</td>
+                <td>6969</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1.1.1</td>
+                <td>6969</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1.1.1</td>
+                <td>6969</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        var checkAll = $("input[value = '全选']")[0];
+        var clearAll = $("input[value = '取消']")[0];
+        var removeAll = $("input[value = '反选']")[0];
+        checkAll.onclick = function () {
+            /* prop方法有最简单的循环遍历功能
+               $('#tb:checkbox').prop('checked');   获取值
+            */
+            $("#tb input[type = 'checkbox']").prop('checked',true);  //重新设置新值 true 或 false
+        };
+        clearAll.onclick = function () {
+            $("#tb input[type = 'checkbox']").prop('checked',false);
+        };
+        removeAll.onclick = function () {
+            $("#tb input[type = 'checkbox']").each(function (k) {
+                // each 是JQ里内置循环函数方法  k则表示 元素的序号
+                // this：DOM对象 必要时需要转换成JQ对象 指代当前循环的各个元素
+                console.log(k, this);
+                if ($(this).prop('checked')) {
+                    $(this).prop('checked',false)
+                } else {
+                    $(this).prop('checked',true)
+                }
+
+                /*
+                三元运算 var v = 条件?真值:假值
+                var v = $(this).prop('checked')?false:true;
+                console.log(v);
+                $(this).prop('checked',v)
+                */
+            })
+        }
+    </script>
+</body>
+</html>

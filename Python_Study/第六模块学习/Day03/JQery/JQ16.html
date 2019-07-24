@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<script src="jquery1.12.4.js"></script>-->
+    <script src="plugin1.js"></script>
+    <script>
+        //通过导入plugin1.js文件来调用wangsen()函数
+        var v = $.wangsen();
+        alert(v);
+        /*  JQuery扩展
+        方法一：
+        $.extend({
+            'wangsen':function () {
+                return 'sb';
+            }
+        });
+        var v = $.wangsen();
+        alert(v);
+        方法二：
+        $.fn.extend({
+            'hanyang':function () {
+                return 'db';
+            }
+        });
+        var l = $('#i1').hanyang();
+        alert(l);
+        */
+    </script>
+</body>
+</html>

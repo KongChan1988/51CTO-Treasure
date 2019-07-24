@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .title{
+            height: 50px;
+            margin-left: 100px;
+        }
+        .d1{
+            height: 30px;
+            width: 150px;
+            background-color: #969696;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        .d1_change{
+            height: 30px;
+            width: 150px;
+            background-color: yellowgreen;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <input type="button" value="全选"/>
+        <input type="button" value="反选"/>
+        <input type="button" value="取消"/>
+        <div class="d1">进入编辑模式</div>
+    </div>
+    <table border="1" id = 't1'>
+        <thead>
+            <tr>
+                <th>选择</th>
+                <th>主机名</th>
+                <th>端口</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td name = 'hostname'>v1</td>
+                <td name = 'port'>v11</td>
+                <td class="t3">
+                    下线
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>v2</td>
+                <td>v22</td>
+                <td class="t3">
+                    在线
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>v3</td>
+                <td>v33</td>
+                <td class="t3" >
+                    在线
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $(function () {
+            var checkbox = $("#t1 tbody tr td input[type = 'checkbox']");
+            $("#t1 tbody tr td").delegate("input[type = 'checkbox']",'click',function () {
+                //单击checkbox函数并传参给Edit函数
+                $(this).each(function () {
+                    Edit($(this));
+                })
+            });
+
+            function Edit(self) {
+                //判断是否已进入编辑模式
+                if(self.prop('checked') && $('.d1').attr('as')){
+                    // console.log(self + " Edit() 已进入编辑模式 checked = true" );
+                    af(self);
+                }else if(self.prop('checked')===false && $('.d1').attr('as')){
+                    // console.log(self + " Edit() 已进入编辑模式 且 checked = false" );
+                    df(self);
+                }
+            }
+
+            $('.d1').click(function () {
+                //点击 "编辑按钮"选择是否进入编辑模式
+                $(this).toggleClass('d1_change');
+                if($(this).hasClass('d1_change')) {
+                    $(this).attr('as','on');       //已进入编辑模式后 新增该标签 as = on 属性
+                    checkbox.each(function () {
+                        if($(this).prop('checked')){
+                            // console.log($(this) + "click() 已进入编辑模式 checked = true" );
+                            af($(this));
+                        }
+                    })
+                }else {
+                    $(this).removeAttr('as');    //取消进入编辑模式后 删除该标签 as = on 属性 并执行 df() 函数
+                    checkbox.each(function () {
+                        if($(this).prop('checked')){
+                            $(this).prop('checked',false);
+                            df($(this));
+                        }
+                    })
+                }
+            });
+
+             function af(self) {
+                 //checked=true 且 已进入编辑模式后 执行该函数
+                 //对可编辑框进行相应操作
+                 var v = $(self).parent().next().text();
+                 var td = $(self).parent().next();
+                 td.empty();             //删除<td>标签中的内容 <input type=text/ >
+                 var tag = document.createElement('input');  //新增input标签
+                 tag.type = 'text';
+                 tag.value = v;  //将input标签文本赋值
+                 td.append(tag);
+                 D_box(self);
+             }
+             function df(self) {
+                //checked=false 或 未进入编辑模式后 执行该函数
+                //对可编辑框进行相应操作
+                var v = self.parent().next().children().val();
+                var td = self.parent().next();
+                td.empty();
+                td.append(v);
+                P_box(self);
+            }
+//            function af(self) {
+//                //checked=true 且 已进入编辑模式后 执行该函数
+//                //对可编辑框进行相应操作
+//                var td = $(self).parent().nextUntil('.t3');
+//                td.each(function () {
+//                    var v = $(this).text();
+//                    var n = $(this).attr('name');
+//                    var input = document.createElement('input');
+//                    input.type = 'text';
+//                    input.value = v;
+//                    input.name = n;
+//                    $(this).empty();
+//                    $(this).append(input);
+//                });
+//            }
+
+//            function df(self) {
+//                //checked=false 或 未进入编辑模式后 执行该函数
+//                //对可编辑框进行相应操作
+//                var input = self.parent().nextUntil('.t3').children();
+//                input.each(function () {
+//                    var td = self.parent().nextUntil('.t3');
+////                    console.log(td);
+//                    var v = $(this).val();
+//                    var n = $(this).attr('name');
+//                    td.empty();
+//                    var tag = $("td[name = '" + n + "']").text = v;
+//                    console.log(tag);
+//                });
+//            }
+
+            $('.title').delegate("input[value = '全选']",'click',function () {
+                checkbox.each(function () {
+                    if($(this).prop('checked')===false){   //只将checked=false的变为true,防止原先checked=true的标签
+                        $(this).prop('checked',true);       //再次被选中并更改原先样式
+                        Edit($(this));
+                    }
+                })
+            });
+            $("input[value = '反选']").click(function () {
+                checkbox.each(function () {
+                    if($(this).prop('checked')){
+                        $(this).prop('checked',false);
+                        Edit($(this));
+                    }else {
+                        $(this).prop('checked',true);
+                        Edit($(this));
+                    }
+                })
+            });
+            $("input[value = '取消']").click(function () {
+                checkbox.each(function () {
+                    if($(this).prop('checked')){
+                        $(this).prop('checked',false);
+                        Edit($(this));
+                    }
+                })
+            });
+            function D_box(self) {
+                var select = self.parent().next().next().next();
+                select.empty();
+                var tag = "<select>\n"+"<option>上线</option>\n"+"<option>下线</option>\n"+" </select>";
+                select.append(tag);
+            }
+            function P_box(self) {
+                var select = self.parent().next().next().next();
+                var v = $('select option:selected').val();  //获取select标签的选中值
+                select.empty();
+                select.append(v);
+            }
+        })
+    </script>
+</body>
+</html>

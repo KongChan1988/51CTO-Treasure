@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pg-title{
+            background-color:#dddddd;
+            height: 38px;
+            line-height: 38px;
+        }
+        .dt{
+            padding: 8px;
+            float: left;
+            line-height: 20px;
+        }
+        .pg-logo{
+            height: 120px;
+            line-height: 68px;
+        }
+        img{
+            border: 0;
+        }
+        .category{
+            margin-top: 20px;
+            height: 48px;
+            background-color: red;
+            font-weight: bold;
+            color: white;
+        }
+        .category_item{
+            background-color: brown;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            float: left;
+        }
+        .border{
+            border-top: 2px solid red;
+            border-bottom: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+        }
+        .product{
+            margin-left: 10px;
+            color: #7d7d7d;
+            float: left
+        }
+        .apple{
+            color: #7d7d7d;
+            font-weight: bold;
+            margin-left: 2%
+        }
+        .sorting{
+            color: black;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 40px
+        }
+        .product_item{
+            border: 1px solid red;
+            float: left;
+            height: 400px;
+            width: 300px;
+            margin-left: 2%;
+            margin-top: 2%
+        }
+        .add_subtract{
+            float: left;
+            color: #7d7d7d;
+            line-height: 25px;
+            width: 30px;
+            text-align: center;
+            border-right: 1px solid #dddddd
+        }
+
+    </style>
+</head>
+<body style="margin: 0 auto">
+    <!--标题栏-->
+    <div class="pg-title">
+        <div style="width: 1600px;margin: 0 auto">
+            <div style="float: left">*收藏本站</div>
+            <div style="float: right">
+                <div class="dt">
+                    <a>登录</a>
+                </div>
+                <div class="dt">
+                    <a>注册</a>
+                </div>
+                <div class="dt">
+                    <a>我的订单</a>
+                </div>
+                <div class="dt">
+                    <a>我的收藏</a>
+                </div>
+                <div class="dt">
+                    <a>*VIP 会员俱乐部</a>
+                </div>
+                <div class="dt">
+                    <a>关注</a>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <!--Logo栏-->
+    <div class="pg-logo">
+        <!--搜索框 购物车栏-->
+        <div style="width: 1000px;margin: 0 auto">
+            <div style="width: 250px;float: left">
+                <img style="height: 100px;width: 100px;margin-top: 12px" src="翎猫.png">
+            </div>
+            <div style="height: 100px;float: left;margin-top:20px;margin-left: 100px">
+                <input style="height: 35px;width: 330px;" type="text"/>
+                <div style="margin: -35px;margin-left: 0;">
+                    <samp style="color: red;font-weight: bold;font-size: 15px">热门搜索：</samp>
+                    <a style="margin-left: 10px;color: #7d7d7d">火龙果</a>
+                    <a style="margin-left: 10px;color: #7d7d7d">瓜子</a>
+                </div>
+            </div>
+            <div style="margin-top:34px;float: left">
+                <img style="height: 41px;" src="2.png">
+            </div>
+            <div style="margin-top:35px;float: right;border: 1px solid #dddddd;
+            height: 45px;width: 120px;
+            text-align: center;line-height: 45px">
+                我的购物车<img style="margin: 0" src="购物车.jpg"/>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <!--类目栏-->
+    <div class="category">
+        <!--类目栏-->
+        <div style="width: 1600px;margin: 21px auto">
+            <div style="float: left;width: 80%">
+                <div class="category_item" style="width: 20%">
+                    <a>全部商品列表</a>
+                    <div style="border: 1px solid #dddddd;float: left;width: 100%">
+                        <div style="color: red;float: left">南方水果:</div>
+                        <br/>
+                        <a class="product">火龙果</a>
+                        <a class="product">火龙果</a>
+                        <a class="product">火龙果</a>
+                    </div>
+                    <div style="border: 1px solid #dddddd;float: left;width: 100%">
+                        <div style="color: red;float: left">南方水果:</div>
+                        <br/>
+                        <a class="product">火龙果</a>
+                        <a class="product">火龙果</a>
+                        <a class="product">火龙果</a>
+                    </div>
+                    <div style="border: 1px solid #dddddd;float: left;width: 100%">
+                        <div style="color: red;float: left">南方水果:</div>
+                        <br/>
+                        <a class="product">火龙果</a>
+                        <a class="product">火龙果</a>
+                        <a class="product">火龙果</a>
+                    </div>
+                    <div style="border: 1px solid #dddddd;float: left;width: 100%;margin-top: 10%">
+                        <div style="color: red;float: left">热销排行榜:</div>
+                        <br/>
+                        <a class="product">火龙果</a>
+                        <a class="product">火龙果</a>
+                        <a class="product">火龙果</a>
+                    </div>
+                    <div style="border: 1px solid #dddddd;float: left;width: 100%">
+                        <div style="color: black;float: left">Content</div>
+                    </div>
+                </div>
+                <div class="category_item"  style="margin-left: 5px;width: 8%">
+                    <a>首页</a>
+                </div>
+                <div class="category_item"  style="margin-left: 5px;width: 8%">
+                    <a>网上超市</a>
+                </div>
+                <div class="category_item"  style="margin-left: 5px;width: 8%">
+                    <a>水果超市</a>
+                </div>
+                <div class="category_item"  style="margin-left: 5px;width: 8%">
+                    <a>超级订餐</a>
+                </div>
+                <div class="category_item"  style="margin-left: 5px;width: 8%">
+                    <a>生活娱乐</a>
+                </div>
+                <div class="category_item"  style="margin-left: 5px;width: 8%">
+                    <a>研究院</a>
+                </div>
+            </div>
+            <div style="float: right;width: 20%">
+                <div class="category_item"  style="margin-left: 5px;width: 30%">
+                    <a>研究院</a>
+                </div>
+                <div class="category_item"  style="margin-left: 5px;width: 30%">
+                    <a>猜你喜欢</a>
+                </div>
+                <div class="category_item"  style="margin-left: 5px;width: 30%">
+                    <a>论坛</a>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <!--已选产品和规格-->
+        <div style="margin-left: 22%;margin-top: 1%;width: 70%">
+            <div style="color: black">福特>蒙迪欧>2.0T</div>
+            <div class="border" style="margin-top: 1%;height: 200px">
+                <div style="color: black;height: 25%;line-height: 60px">您已选择：
+                    <samp class="apple">苹果</samp>
+                </div>
+                <div style="color: black;height: 25%;line-height: 60px;margin-left: 2%">材质：
+                    <samp class="apple">苹果</samp>
+                   <samp class="apple">苹果</samp>
+                    <samp class="apple">苹果</samp>
+                </div>
+                <div style="color: black;height: 25%;line-height: 60px;margin-left: 2%">品牌：
+                    <samp class="apple">苹果</samp>
+                    <samp class="apple">苹果</samp>
+                    <samp class="apple">苹果</samp>
+                </div>
+                <div style="color: black;height: 25%;line-height: 60px;margin-left: 2%">风格：
+                    <samp class="apple">苹果</samp>
+                    <samp class="apple">苹果</samp>
+                    <samp class="apple">苹果</samp>
+                </div>
+            </div>
+        </div>
+        <!--排序-->
+        <div style="margin-left: 22%;margin-top: 1%;width: 70%">
+            <div style="border: 1px solid #dddddd;height: 40px">
+                <div style="float: left;width: 70%">
+                    <samp class="sorting" style="margin-left: 2%">排序:</samp>
+                    <samp class="sorting" style="margin-left: 5%;color: blue">价格↑</samp>
+                    <samp class="sorting" style="margin-left: 5%;color: blue">销量↑</samp>
+                    <samp class="sorting" style="margin-left: 5%;color: blue">最新↑</samp>
+                </div>
+                <div style="float: right;width: 30%">
+                    <div class="sorting" style="margin-left: 35%;color: red;float: left">共x件商品</div>
+                    <div class="sorting" style="margin-left: 5%;color: red;float: left;">1
+                        <samp style="color: black">/675</samp>
+                    </div>
+                    <input type="submit" value="<" style="height: 30px;margin-left: 5%;margin-top: 5px"/>
+                    <input type="submit" value=">" style="height: 30px;line-height: 10px;margin-top: 5px"/>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <!--商品首页图-->
+        <div style="margin-left: 22%;margin-top: 1%;width: 70%;height: 1400px">
+            <div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div>
+
+            <div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div>
+            <div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div>
+            <div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div>
+            <div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div>
+            <div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div>
+            <div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div>
+            <div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div><div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div><div class="product_item" >
+                <div style="height: 300px;width: 300px">
+                    <a href="http://m1002.welinkmalls.com/shop/product?productid=10316&_time=1529488195739">
+                        <img src="国台酒.jpg" style="width: 300px;height: 300px">
+                    </a>
+                </div>
+                <div style="color: black;text-align: center">
+                    【国台 典藏酒】最经典的酱香酒味 封坛多年的特级酒汁 6瓶/箱 500ml/瓶 酒精度53%
+                </div>
+                <div style="height: 50px;width: 100px;float: left">
+                    <samp style="color: red;font-weight: bold;font-size: 20px;
+                    line-height: 50px;margin-left: 10%">$2880.00</samp>
+                </div>
+                <div style="height: 50px;width: 180px;float: right">
+                    <div style="border: 1px solid #dddddd;width: 125px;float: left;margin-top: 10px;height: 25px;">
+                        <div class="add_subtract">-</div>
+                        <div style="float: left;color: #7d7d7d;line-height: 25px">1</div>
+                        <div class="add_subtract" style="float: right">+</div>
+                    </div>
+                    <input style="background-color: red;color: white;
+                    width: 30px;margin-left: 1%;margin-top: 7px;height: 30px" type="submit" value="买"/>
+                </div>
+            </div>
+
+            <div style="clear: both"></div>
+        </div>
+    </div>
+</body>
+</html>

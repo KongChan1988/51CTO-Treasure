@@ -1,0 +1,5 @@
+10/23/2017 21:07:53 INFO loggings.py:13:<module> test info
+10/23/2017 21:07:53 WARNING loggings.py:14:<module> This is warning message
+10/23/2017 21:07:53 ERROR loggings.py:15:<module> test error
+10/23/2017 21:07:53 CRITICAL loggings.py:16:<module> test critical
+10/23/2017 21:07:53 WARNING loggings.py:19:app_run app has test warning

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .d1{
+            height: 48px;
+            background-color: black;
+            color: white;
+            line-height: 48px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="margin: 0">
+    <div class="d1">欢迎来到后台管理</div>
+    <div>
+        <form rel="/home" method="post">
+            <input type="text" name="username" placeholder="请输入用户名"/>
+            <input type="text" name="sex" placeholder="请输入性别"/>
+            <input type="text" name="email" placeholder="请输入邮箱"/>
+            <input type="submit" value="添加"/>
+        </form>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>邮箱</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in user_list%}
+                    <tr>
+                        <td>{{row.username}}</td>
+                        <td>{{row.sex}}</td>
+                        <td>{{row.email}}</td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>51CTO技术家园</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: "Arial","Microsoft YaHei","微软雅黑";
+            font-size: 12px;
+            line-height: 24px;
+            background: #f8f8f8;
+            overflow-y: scroll;
+        }
+        h1, h2, h3, form, img, ul, ol, li, dl, dt, dd, div, span, p {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            font-style: normal;
+            font-weight: normal;
+        }
+        .hide{
+            display: none;
+        }
+        .sign{
+            line-height: 1.5;
+            height: 520px;
+        }
+        .loginwarp{
+            margin: 50px auto;
+            width: 965px;
+            height: 520px;
+        }
+        .loginpic{
+            height: auto;
+            width: 960px;
+        }
+        .loginimg{
+            height: 360px;
+            margin-top: 35px;
+            float: left;
+        }
+        .logo{
+            margin-left: 15px;
+        }
+        .logintable{
+            float: right;
+            height: 480px;
+            width: 320px;
+            padding: 0 20px;
+            margin-top: -30px;
+            border: 1px solid #dddddd;
+
+        }
+        .table_heard{
+            /*border: 1px solid #dddddd;*/
+            font-size: 12px;
+            font-family: Tahoma,Geneva,sans-serif;
+            height: 60px;
+            margin-bottom: 15px;
+            line-height: 60px;
+        }
+        .tosignup{
+            /*border: 1px solid #dddddd;*/
+            line-height: 60px;
+            float: right;
+            width: 120px;
+            height: 60px;
+        }
+        .user{
+            /*border: 1px solid #dddddd;*/
+            height: 43px;
+            width: 320px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .input{
+            height: 38px;
+            width: 220px;
+            margin-left: 45px;
+            padding-right: 50px;
+            padding-left: 10px;
+        }
+        .use_label{
+            position: absolute;
+            height: 43px;
+            width: 25px;
+            margin: 0 0 10px 10px;
+            background: url("picture/z_sign.png") no-repeat ;
+        }
+        .pwd_label{
+            position: absolute;
+            height: 43px;
+            width: 25px;
+            margin: 0 0 10px 10px;
+            background: url("picture/z_sign.png") no-repeat 0 -48px;
+        }
+        .login_button{
+            background-color: #f56467;
+            color: white;
+            height: 45px;
+            width: 85px;
+            margin-left: 10px;
+            border: 0;
+        }
+        .login_button:hover{
+            background-color: #e03537;
+        }
+        .wechat{
+            height: 45px;
+            border: 1px solid #28b328;
+            margin-top: 50px;
+        }
+        .wechat_img{
+            height: 40px;
+            width: 171px;
+            display: block;
+            background: url("picture/z_wechat.png") no-repeat 98px ;
+            text-align: left;
+            line-height: 40px;
+            color: #666;
+            font-size: 18px;
+            padding-left: 136px;
+        }
+        .other{
+            width: 320px;
+            height: 90px;
+
+        }
+        .pup{
+            background: url("picture/z_up.png") no-repeat 245px;
+            background-color: #f6f6f6;
+            color: #666;
+            height: 35px;
+            margin: 0;
+            line-height: 35px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .pdp{
+            background: url("picture/z_down.png") no-repeat 245px;
+            background-color: #f6f6f6;
+            color: #666;
+            height: 35px;
+            margin: 0;
+            line-height: 35px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .other_pup{
+            height: 53px;
+            width: 320px;
+            color: #000;
+            background: #fff;
+            font-size: 12px;
+        }
+        .other_a{
+            position: relative;
+            width: 56px;
+            height: 56px;
+            display: inline-block;
+            color: #000;
+        }
+        .o_img{
+            position: absolute;
+            line-height: 53px;
+            height: 25px;
+            width: 25px;
+            margin: 14px 5px auto;
+            opacity: 0.8;
+            display: inline-block;
+        }
+        .other .other_pup .other_a .p{
+            width: 24px;
+            display: inline-block;
+            float: right;
+            line-height: 50px;
+        }
+        .foot{
+            border-top:1px solid #D4D4D4 ;
+            margin: 108px auto;
+            width: 960px;
+            text-align: center;
+            color: #444444;
+            line-height: 30px;
+            height: 107px;
+            padding: 8px 0 50px;
+        }
+        .foot a:hover{
+            color: #BE1C1A;
+        }
+        a{
+            text-decoration: none;
+        }
+        .foot a{
+            color: #444444;
+        }
+        .M{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9;
+            background-color: #7d7d7d;
+            opacity: 0.5;
+        }
+        .dialog{
+            position: fixed;
+            z-index: 10;
+            top: 50%;
+            left: 50%;
+            height: 300px;
+            width: 440px;
+            background: #fff;
+            margin-top: -150px;
+            margin-left: -220px;
+
+        }
+        .D-heard{
+            background: #3babf7;
+            height: 36px;
+            line-height: 36px;
+            color: #fff;
+            padding-left: 20px
+        }
+        .D-body{
+            height: 105px;
+            margin-top: 20px;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        .dialog p{
+            font-size: 12px;
+            padding-top: -44px;
+            margin-top: 0;
+            width: 75px;
+            margin-bottom: 0;
+        }
+        textarea{
+            width: 310px;height: 70px;
+            border: 1px solid #cccccc;
+            padding: 5px 10px;
+            color: #666;
+            resize: none;
+            outline: none;
+            margin-left: 35px;
+        }
+        .D-body-foot .input{
+            width: 310px;height: 25px;
+            border: 1px solid #cccccc;
+            padding: 5px 10px;
+            color: #666;
+            resize: none;
+            outline: none;
+            margin-left: 35px;
+        }
+        .D-body-foot{
+            height: 65px;
+            margin-top: 15px;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        .dialog .D-submit{
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #178fe6;
+            width: 82px;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            background: #178fe6;
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sign">
+        <!--固定在整个html中间-->
+        <div class="loginwarp">
+            <!--logo图-->
+            <a target="_blank" href="http://blog.51cto.com/51ctoblog/2132577?dl" class="logo"><img src="picture/logo.jpg"></a>
+            <!--logo图结束-->
+            <div class="loginpic">
+                <!--51CTO介绍首页图-->
+                <div class="loginimg">
+                    <a target="_blank" href="http://edu.51cto.com/px/train/248?h"><img src="picture/banner_51cto.png"></a>
+                </div>
+                <!--右边用户名、密码及操作菜单栏-->
+                <div class="logintable">
+                    <!--右边顶部标题-->
+                    <div class="table_heard">
+                        <div class="tosignup">
+                            <a target="_blank" href="http://blog.51cto.com/51ctohome/579769" style="color: #969696;
+                            margin-right: 10px;">无法登录?</a>
+                            |
+                            <a href="注册.html"
+                               style="color: red;
+                               margin-left: 10px">注册</a>
+                        </div>
+                        <h1 style="color:#333;font-size: 20px;width: 300px;margin-left: 20px">登录51CTO</h1>
+                    </div>
+                    <!--用户名、密码输入框-->
+                    <div class="user">
+                        <label for = "username" class="use_label"></label>
+                        <input id = "username" type="text" placeholder="用户名/邮箱/手机" class="input"/>
+                    </div>
+                    <div class="user">
+                        <label for = "pwd" class="pwd_label"></label>
+                        <input id = "pwd" type="text" placeholder="密码" class="input"/>
+                    </div>
+                    <!--普通登录操作-->
+                    <div class="user">
+                        <input type="submit" value="登录" class="login_button"/>
+                        <div style="float: right;height: 45px;line-height: 45px;width: 200px;font-size: 12px">
+                            <input id = "in1" type="checkbox" style="height: 15px;width: 15px;position: relative;top: 3px;"/>
+                            <label for = "in1">10天内自动登录</label>
+                            <a style="float: right" target="_blank" href="http://home.51cto.com/user/register?reback=http%3A%2F%2Fedu.51cto.com%2Fcenter%2Fuser%2Findex%2Flogin-success%3Fsign%3D9617CAQHCQRWCQhRCVoNCVRbAgIGAVAABlYIXgMNRkQRW04XUVNMGlMIWxVWF1pfW0xRU15DVxAfQ1UMWQcdRRIEExddWV1RHgZME1hQV29fBw8PBFJUAQA%26client%3Dweb">忘记密码？</a>
+                        </div>
+                    </div>
+                    <!--微信登陆操作-->
+                    <div class="user">
+                        <div class="wechat">
+                            <a class="wechat_img" href="http://home.51cto.com/index?wxreg=1&reback=http://edu.51cto.com/center/user/index/login-success?sign=47d7UQgCBwQGUwgHCAcNClcLUgFUUlcDBAZcWVRfQ0URXxdOXVZCGgNSW0NXSlpcWBwBUAwQUBMdEwELDlUYRBIASk5RXFNRTlxMRVkNV2xcV18MVlACBQU">微信登录</a>
+                        </div>
+                    </div>
+                    <!--其他登录操作-->
+                    <div class="other">
+                        <p  id = "i1" class="pup hide" onclick="change()">你也可以使用以下账号登录</p>
+                        <p  id = "i2" class="pdp" onclick="nochange()">你也可以使用以下账号登录</p>
+                        <div id = "i3" class="other_pup hide">
+                            <a class="other_a" href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=101355806&redirect_uri=http://home.51cto.com/third-party/qq?reback=http://edu.51cto.com/center/user/index/login-success?sign=9617CAQHCQRWCQhRCVoNCVRbAgIGAVAABlYIXgMNRkQRW04XUVNMGlMIWxVWF1pfW0xRU15DVxAfQ1UMWQcdRRIEExddWV1RHgZME1hQV29fBw8PBFJUAQA&client=web&state=f163e75ff3db1043ac7f6e633051d90f&scope=get_user_info,add_share,list_album,add_album,upload_pic,add_topic,add_one_blog,add_weibo,check_page_fans,add_t,add_pic_t,del_t,get_repost_list,get_info,get_other_info,get_fanslist,get_idolist,add_idol,del_idol,get_tenpay_addr">
+                                <i class="o_img" style="background: url(picture/z_sign.png) no-repeat 0 -150px;"></i>
+                                <p class="p">QQ</p>
+                            </a>
+                            <a class="other_a" href="https://api.weibo.com/oauth2/authorize?client_id=2065779340&redirect_uri=http%3A%2F%2Fhome.51cto.com%2Fthird-party%2Fsina&response_type=code&state=47918589d041ba7d28b28c87b45bacdf">
+                                <i class="o_img" style="background: url(picture/z_sign.png) no-repeat 0 -225px;"></i>
+                                <p class="p">微博</p>
+                            </a>
+                            <a class="other_a" href="https://www.douban.com/service/auth2/auth?client_id=05f35af5a203986411da10e0e60ac92c&redirect_uri=http%3A%2F%2Fhome.51cto.com%2Fthird-party%2Fdouban&response_type=code&state=b4cd9d093c4c2b277ea0fa615338ea6d">
+                                <i class="o_img" style="background: url(picture/z_sign.png) no-repeat 0 -375px;"></i>
+                                <p class="p">豆瓣</p>
+                            </a>
+                            <a class="other_a" href="http://graph.renren.com/oauth/grant?client_id=f1aba159ae20424bb2ecd39018eccd57&redirect_uri=http%3A%2F%2Fhome.51cto.com%2Fthird-party%2Frenren&response_type=code&display=page&state=renren_5b3c8e29b87f22.95901015&origin=00000">
+                                <i class="o_img" style="background: url(picture/z_sign.png) no-repeat 0 -300px;"></i>
+                                <p class="p">人人</p>
+                            </a>
+                            <a class="other_a" href="https://github.com/login?client_id=a9207f224b9a98a80c63&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3Da9207f224b9a98a80c63%26scope%3Duser%2526public_repo%26state%3D20180704170708">
+                                <i class="o_img" style="background: url(picture/z_sign.png) no-repeat 0 -535px;"></i>
+                                <p class="p">github</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部菜单-->
+        <div class="foot">
+            <a  target="_blank" href="http://www.51cto.com/about/aboutus.html">关于我们</a>
+            |
+            <a  target="_blank" href="http://www.51cto.com/about/zhaopin.html">诚聘英才</a>
+            |
+            <a  target="_blank" href="http://www.51cto.com/about/contactus.html">联系我们</a>
+            |
+            <a  target="_blank" href="http://www.51cto.com/about/history2011.html">网站大事</a>
+            |
+            <a  id = "i4" class="ina popyjdatilfeedback" onclick="showMenu()">意见反馈</a>
+            |
+            <a  target="_blank" href="http://www.51cto.com/about/map.htm">网站地图</a>
+            <br>Copyright © 2005-2018 <a  href="Http://www.51cto.com">51CTO.COM</a> 版权所有
+        </div>
+        <!--遮募层-->
+        <div id = "M1" class="M hide"></div>
+        <!--遮募层结束-->
+        <div id = "D1" class="dialog hide">
+            <div class="D-heard">
+                意见反馈
+                <span style="float: right;padding-right: 15px;" onclick="noshow()">x</span>
+            </div>
+            <div class="D-body">
+                <p class="p">意见或建议：</p>
+                <textarea class="textarea" placeholder="请详细描述意见、问题或建议，2-300字以内"></textarea>
+            </div>
+            <div class="D-body-foot">
+                <p class="p">联系方式：</p>
+                <input type="text" class="input"  placeholder="邮箱/QQ号" />
+            </div>
+            <input type="submit" value="提交" class="D-submit" onclick="noshow()"/>
+        </div>
+    </div>
+    <script>
+        function change() {
+            var pup = document.getElementById("i1");
+            pup.nextElementSibling.classList.remove("hide");
+            pup.classList.add('hide');
+            var pup_div = document.getElementById("i3");
+            pup_div.classList.add("hide")
+        }
+        function nochange() {
+            var pup = document.getElementById("i2");
+            pup.previousElementSibling.classList.remove("hide");
+            pup.classList.add('hide');
+            var pup_div = document.getElementById("i3");
+            pup_div.classList.remove("hide")
+        }
+        function showMenu() {
+            var M = document.getElementById("M1");
+            var D = document.getElementById('D1');
+            M.classList.remove("hide");
+            D.classList.remove("hide");
+        }
+        function noshow() {
+            var M = document.getElementById("M1");
+            var D = document.getElementById('D1');
+            M.classList.add("hide");
+            D.classList.add("hide");
+        }
+    </script>
+</body>
+</html>

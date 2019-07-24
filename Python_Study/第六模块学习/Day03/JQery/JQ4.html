@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .d{
+            border: 1px solid #7d7d7d;
+            width: 200px;
+            height: 500px;
+        }
+        .heard{
+            background-color: #006dcc;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .content{
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d">
+        <div class="item">
+            <div class="heard">标题一</div>
+            <div class="content">内容一</div>
+        </div>
+        <div class="item">
+            <div class="heard">标题二</div>
+            <div class="content hide">内容一</div>
+        </div>
+        <div class="item">
+            <div class="heard">标题三</div>
+            <div class="content hide">内容一</div>
+        </div>
+    </div>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $('.heard').click(function () {
+            /*
+            1） .click方法：自动循环遍历JQ对象并对其绑定onclick事件
+            2）筛选器
+            $(this).next()：选中标签的下一个标签
+            $(this).nextALL():  找出所有指定标签
+            $(this).nextUntil('#c1'): 找到某一标签为止
+
+            $(this).prev()：选中标签的上一个标签
+            $(this).prevALL():找出所有指定标签
+            $(this).prevUntil('#c1'):找到某一标签为止
+
+            $(this).parent()：选中标签的父类标签
+            $(this).parents(): 类似于 prevALL()
+            $(this).parentsUntil('#c1'):找到某一标签为止
+
+            $(this).children()：选中标签的所有子类标签
+            $(this).siblings()：选中标签的兄弟标签（同级标签）
+            $(this).find('#i1')：在选中标签的子子孙孙中查找相应的标签  find()方法里能指定标签的id或class
+
+            3） .removeClass('类名')：  在指定标签中删除某个Class
+                .addClass('类名')：  在指定标签中添加某个Class
+             */
+            $(this).next().removeClass('hide');
+            $(this).parent().siblings().find('.content').addClass('hide');
+        })
+    </script>
+
+</body>
+</html>

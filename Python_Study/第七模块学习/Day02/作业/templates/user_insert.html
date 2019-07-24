@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyPDSS Admin</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        body{
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+       a{
+           text-decoration: none;
+           color: inherit;
+       }
+        .pg-heard{
+            height: 48px;
+            background-color: #1b1b1b;
+            color:  #999999;
+            line-height: 48px;
+        }
+        .heard-lift{
+            display: inline-block;
+            width: 20%;
+            font-size: 20px;
+            text-align: center;
+        }
+        .heard-right{
+            display: inline-block;
+            float: right;
+        }
+        .heard-right span{
+            margin-right: 20px;
+            display: inline-block;
+        }
+        .heard-right a{
+            color: #999999;
+        }
+        .heard-right a:hover{
+            color: #3babf7;
+            cursor: pointer;
+        }
+        .menu{
+            position: fixed;
+            top: 80px;
+            left: 0;
+            bottom: 0;
+            width: 16%;
+            min-height: 200px;
+            overflow: auto;
+        }
+        .content{
+            position: fixed;
+            top: 80px;
+            left: 18%;
+            bottom: 0;
+            width: 80%;
+            overflow: auto;
+        }
+        .menu-info{
+            border: 1px solid #e3e3e3;
+            width: 80%;
+            margin-left: 15%;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+        }
+        .dl{
+            margin: 20px 30px auto;
+            font-weight: bold;
+        }
+        .dl dt{
+            font-size: 17px;
+            color: #3babf7;
+            margin-bottom: 15px;
+        }
+        .dl dd{
+            font-size: 15px;
+            color: #999999;
+            margin-bottom: 5px;
+        }
+        dd:hover{
+            color: firebrick;
+            cursor: pointer;
+        }
+        .tab-menu{
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 18px;
+        }
+        #t1,#t2,#t3{
+            float: left;
+            width: 10%;
+            text-align: center;
+        }
+        .menu-item{
+            color: #3babf7;
+            border-radius: 5px;
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        #t1,#t2,#t3:hover{
+            cursor: pointer;
+        }
+        .count{
+            width: 100%;
+            margin-bottom: 15px;
+            height: 50px;
+        }
+        .count .i1,.i2{
+            display: inline-block;
+            float: left;
+        }
+        .count .i1 input{
+            height: 25px;
+            padding: 5px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #dddddd;
+        }
+        .count .i2 input{
+            height: 35px;
+            width: 80px;
+        }
+        .count .i3{
+            position: absolute;
+            border-bottom: 1px solid #dddddd;
+            border-radius: 5px;
+        }
+        .content li{
+            display: inline-block;
+            padding-right: 20px;
+        }
+        .count .i3 a:hover{
+            color: blue;
+            cursor: pointer;
+        }
+        .content_body table th,td{
+            border-bottom: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+        }
+        .content_body table tr{
+            font-size: 15px;
+            height: 30px;
+            text-align: center
+        }
+        .content_body tbody td a{
+            color: #0088cc;
+        }
+        .content_body table{
+            width: 100%;
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+        }
+        .zc{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #7d7d7d;
+            z-index: 5;
+            opacity: 0.5;
+        }
+        .dt input{
+            height: 30px;
+            width: 60px;
+            margin-right: 20px;
+        }
+        .zc-body{
+            z-index: 6;
+            background-color: white;
+            height: 400px;
+            width: 400px;
+            border: 1px solid #999999;
+            border-radius: 5px;
+            top: 50px;
+            left: 50px;
+            position: fixed;
+            margin-top: 100px;
+            margin-left: 700px;
+        }
+        .zc-body label{
+            display: inline-block;width: 80px;text-align: center
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--头部标题栏-->
+    <div class="pg-heard" >
+        <div style="width: 90%;height: 100%;margin: 0 auto">
+            <div class="heard-lift">MyPDSS-管理平台</div>
+            <div class="heard-right">
+                <span>欢迎 测试管理员</span>
+                <a href="/cmdb/login/">退出</a>
+            </div>
+        </div>
+    </div>
+    <!--左右菜单框-->
+    <div class="pg-content">
+        <!--左边菜单框-->
+        <div class="menu">
+            <div class="menu-info">
+                <dl class="dl">
+                    <dt>订单管理</dt>
+                    <dd><a>订单列表</a></dd>
+                    <dd><a>退款列表</a></dd>
+                    <dd><a>发货列表</a></dd>
+                </dl>
+                <dl class="dl">
+                    <dt>轮播图管理</dt>
+                    <dd><a>首页轮播图</a></dd>
+                    <dd><a>添加轮播图</a></dd>
+                </dl>
+                <dl class="dl">
+                    <dt>产品管理</dt>
+                    <dd><a>产品列表</a></dd>
+                    <dd><a>添加产品</a></dd>
+                    <dd><a>共享产品库</a></dd>
+                </dl>
+                <dl class="dl">
+                    <dt>类目管理</dt>
+                    <dd><a>类目列表</a></dd>
+                    <dd><a>添加类目</a></dd>
+                </dl>
+                <dl class="dl">
+                    <dt>仓库管理</dt>
+                    <dd><a>添加仓库</a></dd>
+                    <dd><a>商品库存</a></dd>
+                </dl>
+                <dl class="dl">
+                    <dt>用户管理</dt>
+                    <dd><a href="/cmdb/user_info/">用户列表</a></dd>
+                    <dd><a href="/cmdb/user_insert/">添加新用户</a></dd>
+                    <dd><a>发放奖励</a></dd>
+                </dl>
+            </div>
+        </div>
+        <!--右边菜单框-->
+        <div class="content">
+            <!--右边菜单框标题-->
+            <div class="count">
+                <div>
+                    <span class="add_user" style="color:#3babf7;cursor: pointer;font-size: 20px"> + 添加新用户</span>
+                </div>
+            </div>
+            <!--右边菜单框内容-->
+            <div class="content_body">
+                <table>
+                    <thead>
+                        <tr style="font-size: 20px;height: 30px">
+                            <th>用户ID</th>
+                            <th>用户名</th>
+                            <th>手机号</th>
+                            <th>身份</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in obj %}
+                            <tr>
+                                <td>{{ row.user_id }}</td>
+                                <td>{{ row.user_name }}</td>
+                                {% if row.model == None %}
+                                    <td>暂无记录</td>
+                                {% else %}
+                                    <td>{{ row.model }}</td>
+                                {% endif %}
+                                {% if row.type == 1 %}
+                                    <td>黄金VIP会员</td>
+                                {% elif row.type == 2%}
+                                    <td>VIP会员</td>
+                                {% else %}
+                                    <td>普通会员</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="zc hide"></div>
+        <div class="zc-body hide">
+            <form action="/cmdb/user_insert/" method="post" id="install">
+                <!--顶部标题-->
+                <div style="height: 50px;background-color: #3babf7;width: 400px;color: white;">
+                    <div style="width: 90%;height: 50px;margin: 0 auto">
+                        <div style="float: left;text-align: center;line-height: 50px">添加新用户</div>
+                        <div style="float: right;text-align: center;line-height: 50px" class="X">X</div>
+                    </div>
+                </div>
+                <!--编辑内容-->
+                <div style="height: 350px;position: relative;margin-top: 20px">
+                    <p>
+                        <label >用户名：</label>
+                        <input name="username" type="text" value=""/>
+                    </p>
+                    <p>
+                        <label >密码：</label>
+                        <input name="pwd" type="text" value=""/>
+                    </p>
+                    <p>
+                        <label >手机号：</label>
+                        <input name="model" type="text" value="" pattern="^1[3-9]\d{9}$" required/>
+                        <span style="color: red">{{ mesg }}</span>
+                    </p>
+                    <p>
+                        <label >邮箱：</label>
+                        <input name="email" type="text" value=""/>
+                    </p>
+                    <p>
+                        <label >身份：</label>
+                        <select name="type" style="text-align: center;line-height: 10px">
+{#                            <option value="1" selected="selected">{{ row.type }}</option>#}
+                            <option value="1" >黄金VIP会员</option>
+                            <option value="2" >VIP会员</option>
+                            <option value="3">普通会员</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label >所属组：</label>
+                        <select name="group">
+                            <option value="1">CEO</option>
+                            <option value="2">CTO</option>
+                            <option value="3">QA</option>
+                        </select>
+                    </p>
+                    <!--提交表单-->
+                    <div class= "dt" style="position:absolute;bottom: 35px;left: 20px">
+                        <input class= "X3" type="submit" value="提交"/>
+                        <a class="ajax">Ajax提交</a>
+                        <span style="color: red" id="mesge"></span>
+                        <input class= "X2" type="button" value="取消"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/static/jquery1.12.4.js"></script>
+    <script>
+        $(function () {
+            $(".dl dt").click(function () {
+                $(this).nextAll().removeClass('hide');
+                $(this).parent().siblings().find("dd").addClass('hide');
+            });
+            $('.add_user').click(function () {
+                $('.zc,.zc-body').removeClass('hide')
+            });
+            $('.X,.X2').click(function () {
+                $('.zc,.zc-body').addClass('hide')
+            });
+            $('.X3').click(function () {
+                var flag = true;
+                $('.error').remove();
+                $("input[name='username'],input[name='pwd'],input[name='email']").each(function () {
+                   var v = $(this).val();
+                   if (v.length<=0){
+                       flag = false;
+                       var tag = document.createElement('span');
+                       tag.classList.add('error');
+                       tag.innerText = "必填不能为空";
+                       $(this).after(tag);
+                       return false
+                   }
+                });
+                return flag
+            });
+            $(".ajax").click(function () {
+                $.ajax({
+                    url:"/cmdb/user_insert/",
+                    type:"POST",
+                    data:$("#install").serialize(),
+                    traditional:true,
+                    dataType:"JSON",
+                    success:function (org) {
+                        if (org.status){
+                            $("#mesge").text("提交成功");
+                            location.reload()
+                        }else {
+                            $("#mesge").text(org.error)
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

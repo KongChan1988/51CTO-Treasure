@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>简易版表格写法</p>
+    <table border="1">    <!-- table:创建表格   border：添加边框-->
+        <tr>                <!--tr为行  td为列-->
+            <td>主机名</td>
+            <td>端口</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>192.168.111.12</td>
+            <td>8080</td>
+            <td>
+                <a href="s2.html">查看详情</a>
+                <a href="s7.html">修改</a>
+            </td>
+        </tr>
+        <tr>
+            <td>192.168.111.128</td>
+            <td>8080</td>
+            <td>
+                <a href="s2.html">查看详情</a>
+                <a href="s7.html">修改</a>
+            </td>
+        </tr>
+        <tr>
+            <td>192.168.111.132</td>
+            <td>6969</td>
+            <td>
+                <a href="s2.html">查看详情</a>
+                <a href="s7.html">修改</a>
+            </td>
+        </tr>
+    </table>
+    <p>规范版表格写法</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>表头1</th>
+                <th>表头2</th>
+                <th>表头3</th>
+                <th>表头4</th>
+                <th>表头5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td colspan="2">1</td>  <!-- colspan='x' 该单元格横向占x格   类似合并单元格-->
+                <td>1</td>
+                <td>1</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td rowspan="2">1</td>  <!-- rowspan='x' 该单元格纵向占x格   类似合并单元格-->
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "status":1,
+  "expire_date": "2021-01-01",
+  "credit":5500,
+  "pay_day":22,
+  "balance":9028,
+  "enroll_date": "2016-01-02",
+  "cardid":1112,
+  "password": "123456",
+  "username": "admin",
+  "type":1,
+  "cardname":"招商银行-星耀"
+}

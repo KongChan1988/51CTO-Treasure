@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1" width="300px" >
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+    <script>
+        var tag = document.getElementsByTagName('tr');  //获取table标签下的所有 tr标签
+        var length = tag.length;
+        //循环遍历tr标签
+        for(var i=0;i<length;i++){
+            //谁去调用onmouseover或onmouseout方法  这个this就指向谁  这里的this = tag[i]
+            tag[i].onmouseover = function () {
+                this.style.backgroundColor = 'red'
+            };
+            tag[i].onmouseout = function () {
+                this.style.backgroundColor = ''
+            };
+        }
+    </script>
+</body>
+</html>

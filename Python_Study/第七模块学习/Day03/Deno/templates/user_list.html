@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for row in li %}
+            <li>{{ row.name }}---{{ row.user_type.name }}</li><a href="/cmdb/user_edit-{{ row.id }}">编辑</a>
+        {% endfor %}
+    </ul>
+</body>
+</html>

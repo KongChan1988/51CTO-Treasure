@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .samp-user{
+            position: absolute;
+            height: 39px;
+            width: 40px;
+            left: 0;
+            display: inline-block;
+            background-image: url(用户图标.png)
+        }
+        .samp-pwd{
+            position: absolute;
+            height: 39px;
+            width: 40px;
+            left: 0;
+            display: inline-block;
+            background-image: url(密码图标.png)
+        }
+        .input{
+            width: 240px;
+            height: 35px;
+            padding-left: 50px
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative;height: 40px;width: 270px;">
+        <label class="samp-user" for="id-user"></label>
+        <input class="input" id="id-user" type="text"/>
+        <br>
+        <label class="samp-pwd" for="id-pwd"></label>
+        <input class="input" id="id-pwd" type="password"/>
+    </div>
+</body>
+</html>

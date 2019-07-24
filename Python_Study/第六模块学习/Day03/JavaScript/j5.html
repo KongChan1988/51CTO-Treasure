@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="+:方法一" onclick="AddEla1()"/>
+    <input type="button" value="+:方法二" onclick="AddEla2()"/>
+    <div id = 'i1'>
+        <p><input type="text"/></p>
+    </div>
+    <script>
+        function AddEla1() {
+            var tag = document.getElementById('i1');
+            var val = "<p><input type='text' placeholder='新添文本'/></p>";
+            tag.insertAdjacentHTML('beforeEnd',val)
+        }
+        function AddEla2() {
+            var tag = document.createElement('input');    // 创建一个input标签
+            tag.setAttribute('type','text');            //给新添的标签设置属性
+            tag.setAttribute('placeholder','新添文本');
+            tag.style.fontSize = '16px';
+            tag.style.color = 'red';
+
+            var p = document.createElement('p');  //创建一个p标签
+            p.appendChild(tag);                   //将input标签设置为p标签下的子类
+            document.getElementById('i1').appendChild(p)
+        }
+    </script>
+</body>
+</html>

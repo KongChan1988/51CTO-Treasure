@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a onclick="return ClickOn()" href="http://www.oldboy.com">走你1</a>
+    <a id = 'i1' href="http://www.oldboy.com">走你2</a>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        function ClickOn() {
+            alert(123);
+            return false;
+        }
+        $('#i1').click(function () {
+            alert(456);
+            return false;
+        })
+    </script>
+</body>
+</html>

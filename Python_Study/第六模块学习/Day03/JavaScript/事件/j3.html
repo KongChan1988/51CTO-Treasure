@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #main{
+        background-color: red;
+        width: 300px;
+        height: 400px;
+    }
+    #content{
+        background-color: pink;
+        width: 150px;
+        height: 200px;
+    }
+</style>
+<body>
+    <div id = 'main'>
+        <div id = 'content'></div>
+    </div>
+    <script>
+        /** addEventListener('事件',function函数体,事件捕捉或冒泡);
+         *  默认false：冒泡（后进先出）      true：捕捉（先进先出）
+         **/
+        var mymain = document.getElementById('main');
+        var mycontent = document.getElementById('content');
+        mymain.addEventListener('click',function () {
+            console.log('main')
+        },false);
+        mycontent.addEventListener('click',function () {
+            console.log('content')
+        },false);
+    </script>
+</body>
+</html>

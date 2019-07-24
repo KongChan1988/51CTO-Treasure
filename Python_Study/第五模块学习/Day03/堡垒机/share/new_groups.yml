@@ -1,0 +1,15 @@
+bj_group:
+  user_profiles:
+    - sean
+
+sh_group:
+  user_profiles:
+    - jack
+
+db_servers:
+  user_profiles:
+  - root
+
+web_servers:
+  user_profiles:
+  - root

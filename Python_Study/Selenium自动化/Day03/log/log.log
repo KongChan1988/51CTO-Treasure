@@ -1,0 +1,4 @@
+INFO:root:info message!
+WARNING:root:warning message!
+ERROR:root:error message!
+CRITICAL:root:critical message!

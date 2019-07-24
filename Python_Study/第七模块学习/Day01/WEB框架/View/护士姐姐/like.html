@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>致白衣天使</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="picture/tim.jpg" id="i1">
+    <div class="hide" id="i2">
+        <img src="picture/timg.jpg">
+    </div>
+    <input type="button" value="累了就点我吧！"/>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        $(function () {
+            $(":input").click(function () {
+                var v = $(this).val();
+                if(v === "累了就点我吧！"){
+                    $(this).val('护士姐姐您辛苦了哈~~^-^');
+                    $(this).prev().removeClass('hide').prev().addClass('hide');
+                }else {
+                    $(this).val('累了就点我吧！');
+                    $(this).prev().addClass('hide').prev().removeClass('hide');
+                }
+            })
+        })
+    </script>
+</body>
+</html>

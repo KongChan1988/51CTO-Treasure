@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/plugins/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/static/css/edmure.css"/>
+    <link rel="stylesheet" href="/static/css/commons.css"/>
+    <link rel="stylesheet" href="/static/css/account.css"/>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="login">
+    <div style="font-size: 25px; font-weight: bold;text-align: center;">
+        用户登陆
+    </div>
+    <form role="form">
+        <div class="form-group">
+            <label for="username">用户名</label>
+            <input type="email" class="form-control" id="username" placeholder="请输入用户名">
+        </div>
+        <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" class="form-control" id="password" placeholder="请输入密码">
+        </div>
+        <div class="form-group">
+            <label for="password">验证码</label>
+
+            <div class="row">
+                <div class="col-xs-7">
+                    <input type="password" class="form-control" id="password" placeholder="请输入验证码">
+                </div>
+                <div class="col-xs-5">
+                    <img src="/check_code.html">
+                </div>
+            </div>
+
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> 一个月内自动登陆
+            </label>
+            <div class="right">
+                <a href="#">忘记密码？</a>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">登 陆</button>
+    </form>
+</div>
+</body>
+</html>

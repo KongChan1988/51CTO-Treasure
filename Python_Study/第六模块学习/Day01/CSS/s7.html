@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*background-image:加载图片*/
+        /*background-repeat:加载图片时不重叠只显示一个*/
+        /*background-position: 5px 10px     5px:将图片左右移动,数值越小越往左   10px：将图片上下移动 数值越大越往下移动*/
+        .background{
+            background-image: url("图标.png");
+            height: 20px;
+            width: 20px;
+            background-repeat: no-repeat;
+            border: 1px solid red;
+            background-position: -2px -25px;
+            /*background: url("图标.png") no-repeat -2px -25px;  <!--简易写法-->*/
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 100px"></div>
+    <div class="background"></div>
+</body>
+</html>

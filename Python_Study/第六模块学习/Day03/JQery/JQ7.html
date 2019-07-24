@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .mask{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9;
+            opacity: 0.5;
+            background-color: black;
+        }
+        .Dialog{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            height: 500px;
+            width: 500px;
+            background-color: honeydew;
+            border: 1px solid #dddddd;
+            margin-top: -250px;
+            margin-left: -250px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="添加" id = "add"/>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>选项</th>
+                <th>IP</th>
+                <th>端口</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id = 'tb'>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td target = "hostname">1.1.11</td>
+                <td target = "port">6969</td>
+                <td><a class="edit">编辑</a> || <a class="del">删除</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td target = "hostname">1.1.12</td>
+                <td target = "port">6969</td>
+                <td><a class="edit">编辑</a> || <a class="del">删除</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td target = "hostname">1.1.13</td>
+                <td target = "port">6969</td>
+                <td><a class="edit">编辑</a> || <a class="del">删除</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td target = "hostname">1.1.14</td>
+                <td target = "port">6969</td>
+                <td><a class="edit">编辑</a> || <a class="del">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mask hide"></div>
+    <div class="Dialog hide">
+        <input type="text" name = "hostname" placeholder="IP"/>
+        <input type="text" name = "port" placeholder="PORT"/>
+        <br/>
+        <input type="button" value="取消">
+        <input type="button" value="确认">
+    </div>
+    <script src="jquery1.12.4.js"></script>
+    <script>
+        var a = $('tbody tr td  .edit');
+        var b = $('.Dialog input[value = "取消"]');
+        $('.del').click(function () {
+            $(this).parent().parent().remove()
+        });
+        // console.log(a)
+        $('#add').click(function () {
+            $('.mask,.Dialog').removeClass('hide')
+        });
+        a.click(function () {
+            $('.mask,.Dialog').removeClass('hide');
+            var tag = $(this).parent().prevAll();
+            // var port = $(tag[0]).text();
+            // var ip = $(tag[1]).text();
+            // // console.log(port,ip)
+            // $("input[name = 'IP']").val(ip);
+            // $("input[name = 'port']").val(port);
+            tag.each(function () {
+                var n = $(this).attr('target');    //获取target的属性 hostname 或 port
+                var text = $(this).text();          //获取hostname 或 port中的文本内容
+
+                var a1 = ".Dialog input[name = '";
+                var a2 = "']";
+                var tmp = a1+n+a2;
+                // console.log(tmp,text);
+                $(".Dialog input[name = '"+n+"']").val(text);
+            });
+        });
+        b.click(function () {
+            $('.mask,.Dialog').addClass('hide');
+            $("input[name = 'IP']").val("");
+            $("input[name = 'port']").val("");
+        })
+    </script>
+</body>
+</html>

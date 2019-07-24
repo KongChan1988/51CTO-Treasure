@@ -1,0 +1,93 @@
+{% extends 'backend_layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/plugins/kindeditor/themes/default/default.css"/>
+{% endblock %}
+
+{% block conent %}
+    <ol class="breadcrumb" style="margin-bottom: 0;">
+        <li><a href="#">文章管理</a></li>
+        <li class="active">创建文章</li>
+    </ol>
+    <div style="padding: 5px 8px;">
+        <div class="form-group">
+            <label for="title">标题</label>
+            <input type="text" class="form-control" id="title" placeholder="文章标题">
+        </div>
+        <div class="form-group">
+            <label for="title">简介</label>
+            <textarea class="form-control" placeholder="文章简介"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="content">内容</label>
+            <textarea name="content" style="width: 100%;min-height:500px;visibility:hidden;"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="types">类型</label>
+
+            <div>
+                <label class="radio-inline">
+                    <input type="radio" name="types" value="option1"> 1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="types" value="option2"> 2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="types" value="option3"> 3
+                </label>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="category">分类</label>
+
+            <div>
+                <label class="radio-inline">
+                    <input type="radio" name="category" value="option1"> 1
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="category" value="option2"> 2
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="category" value="option3"> 3
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="category">分类</label>
+
+            <div>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">保 存</button>
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block js %}
+    <script charset="utf-8" src="/static/plugins/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="/static/plugins/kindeditor/lang/zh_CN.js"></script>
+    <script>
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('textarea[name="content"]', {
+                resizeType: 1,
+                uploadJson: '/on.asp',
+                fileManagerJson: '/asp/fjson.asp'
+            });
+        });
+    </script>
+{% endblock %}
